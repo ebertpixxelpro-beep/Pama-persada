@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Media & Berita Terkini | PT Pamapersada Nusantara</title>
+    <meta name="description" content="Dapatkan kabar terbaru, rilis media, dan artikel informatif seputar aktivitas pertambangan, CSR, dan inovasi PT Pamapersada Nusantara.">
+    <meta name="keywords" content="Berita PAMA, Media Pamapersada, Info Tambang, CSR PAMA, PAMA Safe School, Majalah PAMA">
+    <meta name="author" content="PT Pamapersada Nusantara">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pamapersada.com/media/">
+    <meta property="og:title" content="Media Center - PT Pamapersada Nusantara">
+    <meta property="og:description" content="Ikuti kabar terbaru dari PT Pamapersada Nusantara.">
+    <meta property="og:image" content="assets/images/media-hero.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pama-gold: #ffc107; /* Kuning PAMA */
+            --pama-dark: #111111;
+            --pama-gray: #1a1a1a;
+            --text-light: #e0e0e0;
+            --text-muted: #aaaaaa;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--pama-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.9) !important;
+            padding: 15px 0;
+            border-bottom: 1px solid #222;
+        }
+        .nav-link {
+            color: #fff !important;
+            font-weight: 400;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+        .nav-link.active {
+            background-color: #2b3e50; /* Style tombol aktif biru tua sesuai screenshot */
+            border-radius: 4px;
+            padding: 8px 15px;
+        }
+        .nav-link:hover {
+            color: var(--pama-gold) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 400px;
+            /* Placeholder image crowd/press conference */
+            background: url('https://via.placeholder.com/1920x600/111/333?text=Media+Event+PAMA') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-title {
+            font-size: 3rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* Section Styling */
+        .section-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+            margin-top: 60px;
+        }
+        .section-title {
+            color: var(--pama-gold);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        /* Dropdown Filter */
+        .custom-select {
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #444;
+            padding: 5px 15px;
+            border-radius: 4px;
+        }
+
+        /* News Cards */
+        .news-card {
+            background: transparent;
+            border: none;
+            margin-bottom: 40px;
+        }
+        .img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            aspect-ratio: 16/9;
+        }
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .news-card:hover .img-wrapper img {
+            transform: scale(1.05);
+        }
+        
+        .meta-info {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .meta-info i { margin-right: 5px; }
+
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #fff;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .news-title:hover {
+            color: var(--pama-gold);
+        }
+
+        .read-more {
+            color: var(--pama-gold);
+            font-size: 0.85rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Featured/Popular Carousel */
+        .carousel-control-prev, .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b0b0b;
+            padding: 60px 0 30px 0;
+            margin-top: 80px;
+            border-top: 1px solid #222;
+        }
+        .footer-heading {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .footer-link {
+            display: block;
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        .footer-link:hover {
+            color: var(--pama-gold);
+        }
+        .social-box {
+            display: inline-flex;
+            width: 35px;
+            height: 35px;
+            border: 1px solid var(--pama-gold);
+            color: var(--pama-gold);
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .social-box:hover {
+            background: var(--pama-gold);
+            color: #000;
+        }
+
+        /* FAB (Floating Action Buttons) */
+        .fab-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .fab-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .fab-btn:hover { transform: translateY(-5px); }
+        .fab-wa { background-color: #25D366; color: white; font-size: 28px; }
+        .fab-top {
+            background-color: var(--pama-gold);
+            color: #111;
+            font-size: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .fab-top.show { opacity: 1; visibility: visible; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "headline": "Media & Berita Pamapersada",
+      "description": "Kumpulan berita terbaru dan terpopuler dari PT Pamapersada Nusantara.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "PT Pamapersada Nusantara"
+      }
+    }
+    </script>
+</head>
+<body id="top">
+    <div class="top-bar text-white">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-link text-white dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown">
+                    Bahasa Indonesia
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="social-mini">
+                <a href="#" class="text-white ms-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white ms-2"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white ms-2"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.webp" alt="PT Pamapersada Nusantara" style="height: 40px;"> <span class="ms-2 fw-bold align-middle">PT PAMAPERSADA NUSANTARA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="abot.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Sustainability.html">Keberlanjutan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="CenterOfExcellence.html">Pusat Keunggulan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="OurProject.html">Project Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Media.html">Media</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Contact.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Karir</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Media</h1>
+            <p class="lead text-white">Ikuti Kabar Terbaru dari PT Pamapersada Nusantara</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="section-header-row">
+            <h2 class="section-title">Berita Terpopuler</h2>
+            </div>
+
+        <div id="carouselPopular" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="news-card">
+                                <div class="img-wrapper">
+                                    <img src="https://via.placeholder.com/600x340/003366/fff?text=Apa+Itu+Batu+Bara" alt="Infografis Batu Bara" loading="lazy">
+                                </div>
+                                <div class="meta-info">
+                                    <span><i class="far fa-calendar"></i> Saturday, 30 September 2023</span>
+                                    <span><i class="fas fa-tag"></i> Sosial</span>
+                                </div>
+                                <a href="#" class="news-title">Apa itu Batu Bara dan Mengapa menjadi Sumber Energi Besar untuk Dunia?</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="news-card">
+                                <div class="img-wrapper">
+                                    <img src="https://via.placeholder.com/600x340/004488/fff?text=Mining+in+Digital+Age" alt="Digital Mining" loading="lazy">
+                                </div>
+                                <div class="meta-info">
+                                    <span><i class="far fa-calendar"></i> Saturday, 30 September 2023</span>
+                                    <span><i class="fas fa-tag"></i> Teknologi</span>
+                                </div>
+                                <a href="#" class="news-title">Pertambangan di Era Digital: Bagaimana Teknologi Mengubah Industri</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                         <div class="col-md-6">
+                            <div class="news-card">
+                                <div class="img-wrapper">
+                                    <img src="https://via.placeholder.com/600x340/333/fff?text=PAMA+Safe+School" alt="Safe School Program" loading="lazy">
+                                </div>
+                                <div class="meta-info">
+                                    <span><i class="far fa-calendar"></i> Thursday, 13 July 2024</span>
+                                    <span><i class="fas fa-tag"></i> CSR</span>
+                                </div>
+                                <a href="#" class="news-title">PAMA Safe School: Koki Guna jadi Pahlawan Kesehatan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPopular" data-bs-slide="prev" style="left: -50px;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPopular" data-bs-slide="next" style="right: -50px;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <div class="section-header-row">
+            <h2 class="section-title">Berita Terbaru</h2>
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle text-white border-secondary" type="button" data-bs-toggle="dropdown">
+                    Pilih Kategori
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Semua</a></li>
+                    <li><a class="dropdown-item" href="#">Sosial</a></li>
+                    <li><a class="dropdown-item" href="#">Teknologi</a></li>
+                    <li><a class="dropdown-item" href="#">Edukasi</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="news-card">
+                    <div class="img-wrapper" style="max-height: 450px;">
+                        <img src="https://via.placeholder.com/1200x500/333/fff?text=PAMA+Safe+School+Training" alt="Pelatihan P3K PAMA" loading="lazy">
+                    </div>
+                    <div class="meta-info">
+                        <span><i class="far fa-calendar"></i> Thursday, 13 July 2024</span>
+                        <span><i class="fas fa-tag"></i> Edukasi</span>
+                    </div>
+                    <a href="#" class="news-title fs-3">PAMA Safe School: Koki Guna jadi Pahlawan Kesehatan</a>
+                    <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="news-card">
+                    <div class="img-wrapper">
+                        <img src="https://via.placeholder.com/400x250/552200/fff?text=PAMA+Award" alt="Penghargaan PAMA" loading="lazy">
+                    </div>
+                    <div class="meta-info">
+                        <span><i class="far fa-calendar"></i> September, 21 May 2025</span>
+                        <span><i class="fas fa-tag"></i> Prestasi</span>
+                    </div>
+                    <a href="#" class="news-title">PAMA Site ARIA dan Rumah Maggot Kintap Raih Penghargaan Emas di Riau</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="news-card">
+                    <div class="img-wrapper">
+                        <img src="https://via.placeholder.com/400x250/222/fff?text=UMKM+Awards" alt="UMKM Awards" loading="lazy">
+                    </div>
+                    <div class="meta-info">
+                        <span><i class="far fa-calendar"></i> Wednesday, 21 May 2025</span>
+                        <span><i class="fas fa-tag"></i> Sosial</span>
+                    </div>
+                    <a href="#" class="news-title">BERSINERGI DALAM PAMA UMKM AWARDS 2025</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="news-card">
+                    <div class="img-wrapper">
+                        <img src="https://via.placeholder.com/400x250/444/fff?text=PAMA+Go+To+School" alt="Budaya K3LH Sejak Dini" loading="lazy">
+                    </div>
+                    <div class="meta-info">
+                        <span><i class="far fa-calendar"></i> Friday, 23 May 2025</span>
+                        <span><i class="fas fa-tag"></i> Edukasi</span>
+                    </div>
+                    <a href="#" class="news-title">PAMA SAFE SCHOOL: UPAYA MENANAMKAN BUDAYA K3LH SEJAK DINI</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-heading">PT Pamapersada Nusantara</h5>
+                    <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">
+                        Jl. Rawagelam I No. 9, Kawasan Industri Pulogadung,<br>
+                        Jakarta 13930, Indonesia
+                    </p>
+                    <p style="color: #aaa; font-size: 0.9rem;">
+                        <i class="fa-solid fa-phone me-2"></i> (+62 21) 460 2015 (hunting)<br>
+                        <i class="fa-solid fa-fax me-2"></i> (+62 21) 461 4010 / 460 1916
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-3 mb-4">
+                    <h5 class="footer-heading">Site Map</h5>
+                    <a href="#" class="footer-link">Tentang Kami</a>
+                    <a href="#" class="footer-link">Keberlanjutan</a>
+                    <a href="#" class="footer-link">Media</a>
+                    <a href="#" class="footer-link">Kontak</a>
+                </div>
+
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="d-flex mb-3">
+                        <a href="#" class="social-box" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-box" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-box" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr style="border-color: #333;">
+            <div class="text-start" style="color: #666; font-size: 0.8rem;">
+                © Copyright PT Pamapersada Nusantara. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <div class="fab-container">
+        <a href="https://wa.me/6281234567890" target="_blank" class="fab-btn fab-wa" aria-label="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        
+        <a href="#top" class="fab-btn fab-top" id="btnBackToTop" aria-label="Kembali ke Atas">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to Top Functionality
+        const btnBackToTop = document.getElementById('btnBackToTop');
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnBackToTop.classList.add('show');
+            } else {
+                btnBackToTop.classList.remove('show');
+            }
+        };
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

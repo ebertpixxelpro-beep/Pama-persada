@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Our Project - Area Operasional | PT Pamapersada Nusantara</title>
+    <meta name="description" content="Jelajahi area operasional PT Pamapersada Nusantara di seluruh Indonesia. Kami beroperasi di Kalimantan, Sumatera, dan Sulawesi dengan layanan pertambangan terbaik.">
+    <meta name="keywords" content="PAMA Project, Area Operasional PAMA, Tambang Kalimantan, Tambang Sumatera, PAMA Site, Mining Contractor Indonesia">
+    <meta name="author" content="PT Pamapersada Nusantara">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pamapersada.com/our-project/">
+    <meta property="og:title" content="Area Operasional Kami - PT Pamapersada Nusantara">
+    <meta property="og:description" content="Peta sebaran proyek dan site operasional PAMA di seluruh nusantara.">
+    <meta property="og:image" content="assets/images/map-preview.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pama-gold: #ffc107; /* Warna kuning khas PAMA */
+            --pama-dark: #111111;
+            --pama-bg: #0f1012;
+            --list-bg: #1e1e24;
+            --border-color: #2c2c2c;
+            --text-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--pama-bg);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: #000;
+            font-size: 0.8rem;
+            padding: 5px 0;
+            border-bottom: 1px solid #222;
+        }
+        .top-bar a { color: #fff; text-decoration: none; margin-left: 10px; }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.9) !important;
+            padding: 15px 0;
+        }
+        .nav-link {
+            color: #ccc !important;
+            font-weight: 400;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+        .nav-link.active {
+            background-color: #2b3e50; /* Style tombol aktif biru tua spt screenshot */
+            color: #fff !important;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+        .nav-link:hover {
+            color: var(--pama-gold) !important;
+        }
+
+        /* Map Section */
+        .map-section {
+            background-color: var(--pama-bg);
+            padding: 50px 0 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        .map-img {
+            max-width: 80%;
+            height: auto;
+            /* Filter ini untuk menyesuaikan warna peta biru gelap jika pakai gambar placeholder biasa */
+            filter: hue-rotate(180deg) brightness(0.8) contrast(1.2); 
+        }
+        /* Icon gunung kecil di kiri bawah peta */
+        .mountain-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 10%;
+            opacity: 0.5;
+            width: 50px;
+        }
+
+        /* Title Section */
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .page-header h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .page-header p {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        /* Operational Lists */
+        .area-header {
+            background-color: var(--pama-gold);
+            color: #000;
+            font-weight: 500;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            border-radius: 4px 4px 0 0;
+        }
+        .area-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            background-color: #1a1a20; /* Warna gelap list */
+            border-radius: 0 0 4px 4px;
+        }
+        .area-list li {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            color: #ddd;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .area-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b0b0b;
+            padding: 60px 0 30px 0;
+            margin-top: 80px;
+            border-top: 1px solid #222;
+        }
+        .footer-heading {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .footer-link {
+            display: block;
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        .footer-link:hover {
+            color: var(--pama-gold);
+        }
+        .social-box {
+            display: inline-flex;
+            width: 35px;
+            height: 35px;
+            border: 1px solid var(--pama-gold);
+            color: var(--pama-gold);
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .social-box:hover {
+            background: var(--pama-gold);
+            color: #000;
+        }
+
+        /* FAB (Floating Action Buttons) */
+        .fab-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .fab-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .fab-btn:hover {
+            transform: translateY(-5px);
+        }
+        .fab-wa { background-color: #25D366; color: white; font-size: 28px; }
+        .fab-top {
+            background-color: var(--pama-gold);
+            color: #111;
+            font-size: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .fab-top.show { opacity: 1; visibility: visible; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Our Project",
+      "description": "Operational Areas of PT Pamapersada Nusantara.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "PT Pamapersada Nusantara"
+      },
+      "about": {
+        "@type": "Place",
+        "name": "Area Operasional PAMA"
+      }
+    }
+    </script>
+</head>
+<body id="top">
+
+    <div class="top-bar text-white">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-link text-white dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown">
+                    Bahasa Indonesia
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="social-mini">
+                <a href="#" class="text-white ms-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white ms-2"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white ms-2"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.webp" alt="PT Pamapersada Nusantara" style="height: 40px;"> <span class="ms-2 fw-bold align-middle">PT PAMAPERSADA NUSANTARA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="abot.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Sustainability.html">Keberlanjutan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="CenterOfExcellence.html">Pusat Keunggulan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="OurProject.html">Project Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Media.html">Media</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Contact.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Karir</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="map-section">
+        <div class="container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Indonesia_stub.png/2560px-Indonesia_stub.png" alt="Peta Area Operasional PAMA" class="map-img">
+            
+            <div class="mountain-icon text-white">
+                <i class="fa-solid fa-mountain" style="font-size: 24px;"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="page-header">
+            <h2>Area Operasional Kami</h2>
+            <p>Kami telah beroperasi di berbagai wilayah di Indonesia. Kami siap memberikan layanan terbaik di manapun dan kapanpun</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-4">
+                    <div class="area-header">Kalimantan Tengah</div>
+                    <ul class="area-list">
+                        <li>SMMS</li>
+                        <li>ASMI</li>
+                        <li>TOPB</li>
+                        <li>PPSO</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <div class="area-header">Sumatera Selatan</div>
+                    <ul class="area-list">
+                        <li>MTBU</li>
+                        <li>BTSJ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="mb-4">
+                    <div class="area-header">Kalimantan Timur</div>
+                    <ul class="area-list">
+                        <li>KPCB</li>
+                        <li>KIDE</li>
+                        <li>INDO</li>
+                        <li>BEKB</li>
+                        <li>BPOP (Support Office)</li>
+                        <li>NPRL</li>
+                        <li>BRCG</li>
+                        <li>KPCS</li>
+                        <li>TCMM</li>
+                        <li>BRCB</li>
+                        <li>BAYA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="mb-4">
+                    <div class="area-header">Kalimantan Selatan</div>
+                    <ul class="area-list">
+                        <li>ARIA</li>
+                        <li>BBSO (Support Office)</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="area-header">Office</div>
+                    <ul class="area-list">
+                        <li>PPIC</li>
+                        <li>PPIC</li>
+                        <li>PAMA HO</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <div class="area-header">Sulawesi Tenggara</div>
+                    <ul class="area-list">
+                        <li>HMNT</li>
+                        <li>VIPO</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-heading">PT Pamapersada Nusantara</h5>
+                    <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">
+                        Jl. Rawagelam I No. 9, Kawasan Industri Pulogadung,<br>
+                        Jakarta 13930, Indonesia
+                    </p>
+                    <p style="color: #aaa; font-size: 0.9rem;">
+                        <i class="fa-solid fa-phone me-2"></i> (+62 21) 460 2015 (hunting)<br>
+                        <i class="fa-solid fa-fax me-2"></i> (+62 21) 461 4010 / 460 1916
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-3 mb-4">
+                    <h5 class="footer-heading">Site Map</h5>
+                    <a href="#" class="footer-link">Tentang Kami</a>
+                    <a href="#" class="footer-link">Keberlanjutan</a>
+                    <a href="#" class="footer-link">Pusat Keunggulan</a>
+                    <a href="#" class="footer-link">Project Kami</a>
+                </div>
+
+                <div class="col-lg-2 col-md-3 mb-4">
+                    <h5 class="footer-heading">&nbsp;</h5>
+                    <a href="#" class="footer-link">Media</a>
+                    <a href="#" class="footer-link">Kontak</a>
+                    <a href="#" class="footer-link">Karir</a>
+                </div>
+
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="d-flex mb-3">
+                        <a href="#" class="social-box"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-box"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-box"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr style="border-color: #333;">
+            <div class="text-start" style="color: #666; font-size: 0.8rem;">
+                © Copyright PT Pamapersada Nusantara. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <div class="fab-container">
+        <a href="https://wa.me/6281234567890" target="_blank" class="fab-btn fab-wa" aria-label="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        
+        <a href="#top" class="fab-btn fab-top" id="btnBackToTop" aria-label="Kembali ke Atas">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to Top Functionality
+        const btnBackToTop = document.getElementById('btnBackToTop');
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnBackToTop.classList.add('show');
+            } else {
+                btnBackToTop.classList.remove('show');
+            }
+        };
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
