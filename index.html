@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT PAMAPERSADA NUSANTARA - Clone</title>
     
+    <title>PT PAMAPERSADA NUSANTARA - Energy Transformation</title>
+    <meta name="description" content="PT Pamapersada Nusantara adalah kontraktor pertambangan batubara terbesar di Indonesia, berkomitmen pada transformasi energi dan keberlanjutan lingkungan.">
+    <meta name="keywords" content="PAMA, Pamapersada, Mining, Coal, Energy Transformation, ESG, Indonesia">
+    <meta name="author" content="PT Pamapersada Nusantara">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pama-persada.vercel.app/">
+    <meta property="og:title" content="PT PAMAPERSADA NUSANTARA - Energy Transformation">
+    <meta property="og:description" content="Transition Towards More Efficient Energy. PAMA berkomitmen pada prinsip ESG dan keberlanjutan.">
+    <meta property="og:image" content="aset/gambar-1.webp">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preload" as="image" href="aset/gambar-1.webp">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -14,7 +36,7 @@
             --pama-yellow: #fdb913;
             --pama-dark: #1a1a1a;
             --pama-blue: #2c3e50;
-            --text-grey: #cccccc;
+            --text-grey: #dddddd; /* Sedikit diterangkan untuk kontras aksesibilitas */
         }
 
         body {
@@ -22,8 +44,8 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif; /* Font Serif mirip gambar */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
         }
 
         /* --- Utilities --- */
@@ -38,12 +60,14 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
         .btn-pama:hover {
             background-color: #e0a800;
             color: black;
+            transform: translateY(-2px);
         }
-
 
         /* Top Bar & Navbar */
         .top-bar {
@@ -56,21 +80,23 @@
             position: absolute;
             width: 100%;
             z-index: 100;
-            top: 30px; /* Adjust based on top-bar height */
+            top: 30px;
         }
         .navbar-brand img {
             height: 40px;
+            width: auto; /* Mencegah distorsi */
         }
         .nav-link {
             color: #fff !important;
             font-weight: 600;
             text-transform: uppercase;
             font-size: 0.9rem;
+            padding: 10px 15px !important; /* Touch target size fix */
         }
 
         /* --- Hero Section --- */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('aset/gambar-1.webp'); /* Placeholder Image Globe/Earth */
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('aset/gambar-1.webp');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -97,7 +123,7 @@
             color: white;
             padding: 20px 0;
             position: relative;
-            margin-top: -80px; /* Pull up to overlap hero */
+            margin-top: -80px;
             z-index: 10;
         }
         .update-label {
@@ -107,12 +133,16 @@
             border-right: 2px solid #555;
             padding-right: 20px;
         }
-        .news-item h6 {
+        
+        /* Hierarchy Fix: Styling h4 to look like previous h6 but semantically correct */
+        .news-item-title {
             font-family: 'Open Sans', sans-serif;
             font-weight: 600;
             font-size: 0.9rem;
             margin-bottom: 5px;
+            display: block;
         }
+        
         .news-meta {
             font-size: 0.75rem;
             color: #aaa;
@@ -123,7 +153,7 @@
 
         /* --- About Us --- */
         .about-section {
-            background: url('aset/gambar-31.webp'); /* Placeholder Worker/Mining */
+            background: url('aset/gambar-31.webp');
             background-size: cover;
             background-position: center;
             padding: 80px 0;
@@ -131,7 +161,7 @@
             position: relative;
         }
         .about-overlay {
-            background: rgba(0,0,0,0.5); /* Darken image */
+            background: rgba(0,0,0,0.5);
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
         }
@@ -148,14 +178,25 @@
             border: 2px solid var(--pama-yellow);
             position: relative;
             height: 200px;
-            background: url('https://youtu.be/hfeyH16Pm4Y?si=gz8swoX0e-mG75Xm');
-            background-size: cover;
+            background: #000; /* Fallback color */
             display: flex;
             align-items: center;
             justify-content: center;
             margin-top: 30px;
-            width: 350px;
+            width: 100%;
+            max-width: 350px;
         }
+        /* Menggunakan iframe container agar responsif & performa lebih baik */
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            background: url('https://img.youtube.com/vi/hfeyH16Pm4Y/hqdefault.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
         .play-btn {
             font-size: 3rem;
             color: var(--pama-yellow);
@@ -166,6 +207,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: transform 0.3s;
+        }
+        .play-btn:hover {
+            transform: scale(1.1);
         }
 
         /* --- Our Journey (Stats) --- */
@@ -182,7 +227,7 @@
             margin-bottom: 50px;
         }
         .journey-title {
-            color: #2a4b7c; /* Blue color from image */
+            color: #2a4b7c;
             font-size: 2.5rem;
         }
         .stat-card {
@@ -193,6 +238,10 @@
             border-radius: 5px;
             height: 100%;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
         }
         .stat-number {
             color: var(--pama-yellow);
@@ -228,6 +277,8 @@
             color: white;
             text-decoration: none;
             font-size: 0.9rem;
+            padding: 5px 0; /* Touch target optimization */
+            display: inline-block;
         }
         .footer-links a:hover {
             color: var(--pama-yellow);
@@ -242,6 +293,11 @@
             justify-content: center;
             margin-right: 10px;
             text-decoration: none;
+            transition: background 0.3s;
+        }
+        .social-box a:hover {
+            background: var(--pama-yellow);
+            color: #000;
         }
         .copyright {
             border-top: 1px solid #333;
@@ -251,22 +307,77 @@
             color: #777;
         }
 
-        /* Media Queries for Responsiveness */
+        /* --- Floating Buttons (WA & Top) --- */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-float {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            transition: transform 0.3s, opacity 0.3s;
+            opacity: 1;
+        }
+
+        .btn-float:hover {
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+        .btn-wa {
+            background-color: #25D366;
+        }
+
+        .btn-top {
+            background-color: var(--pama-yellow);
+            color: #000;
+            opacity: 0; /* Hidden by default */
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .btn-top.show {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        
+        .btn-top:hover {
+            color: #000;
+        }
+
+
+        /* Media Queries */
         @media (max-width: 768px) {
             .hero-title { font-size: 2.5rem; }
             .update-label { border: none; margin-bottom: 10px; display: block;}
             .navbar { background-color: #222; position: relative; top: 0; padding: 10px;}
             .top-bar { position: relative; background: #000; }
-            .journey-section { background: #dbebf7; } /* Simplify bg on mobile */
+            .journey-section { background: #dbebf7; }
+            .floating-container { bottom: 20px; right: 20px; }
         }
     </style>
 </head>
-<body>
+<body id="top">
 
     <div class="top-bar text-white">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="dropdown">
-                <button class="btn btn-sm btn-link text-white dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown">
+                <button class="btn btn-sm btn-link text-white dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Pilih Bahasa">
                     Bahasa Indonesia
                 </button>
                 <ul class="dropdown-menu">
@@ -274,18 +385,20 @@
                 </ul>
             </div>
             <div class="social-mini">
-                <a href="#" class="text-white ms-2"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white ms-2"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-white ms-2"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-white ms-2" aria-label="Ikuti kami di Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white ms-2" aria-label="Ikuti kami di LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white ms-2" aria-label="Ikuti kami di YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="logo.webp" alt="PT Pamapersada Nusantara" style="height: 40px;"> <span class="ms-2 fw-bold align-middle">PT PAMAPERSADA NUSANTARA</span>
+                <img src="logo.webp" alt="Logo PT Pamapersada Nusantara" width="160" height="40" style="width: auto; height: 40px;"> 
+                <span class="ms-2 fw-bold align-middle d-none d-sm-inline">PT PAMAPERSADA NUSANTARA</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -309,7 +422,7 @@
                 <div class="col-lg-8">
                     <h1 class="hero-title">Energy Transformation<br>Towards a Greener<br>Future</h1>
                     <p class="hero-subtitle">Transition Towards More Efficient Energy</p>
-                    <a href="Sustainability.html" class="btn-pama">Read More <i class="fas fa-arrow-right"></i></a>
+                    <a href="Sustainability.html" class="btn-pama" aria-label="Read more about Sustainability">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -328,7 +441,7 @@
                 </div>
                 <div class="col-md-3 border-end border-secondary">
                     <div class="news-item">
-                        <h6>PAMA Terima Penghargaan di Subroto Award 2024</h6>
+                        <h4 class="news-item-title">PAMA Terima Penghargaan di Subroto Award 2024</h4>
                         <div class="news-meta">
                             <span><i class="fas fa-tag"></i> Good Governance</span>
                             <span class="ms-2"><i class="fas fa-calendar"></i> 10 October 2024</span>
@@ -337,7 +450,7 @@
                 </div>
                 <div class="col-md-3 border-end border-secondary">
                     <div class="news-item">
-                        <h6>PAMA Berhasil Menangkan 6 Kategori di IQSA</h6>
+                        <h4 class="news-item-title">PAMA Berhasil Menangkan 6 Kategori di IQSA</h4>
                         <div class="news-meta">
                             <span><i class="fas fa-tag"></i> Good Governance</span>
                             <span class="ms-2"><i class="fas fa-calendar"></i> 10 September 2024</span>
@@ -346,7 +459,7 @@
                 </div>
                 <div class="col-md-3 position-relative">
                     <div class="news-item">
-                        <h6>Pelepasan Mudik Bersama 500 Karyawan PAMA</h6>
+                        <h4 class="news-item-title">Pelepasan Mudik Bersama 500 Karyawan PAMA</h4>
                         <div class="news-meta">
                             <span><i class="fas fa-tag"></i> Social</span>
                             <span class="ms-2"><i class="fas fa-calendar"></i> 30 April 2024</span>
@@ -367,10 +480,12 @@
                 <div class="col-md-6">
                     <h2 class="section-title">About Us</h2>
                     <p>We have served various clients from the mining business to produce mining and energy products. We are always committed to ESG principles and prioritize continuity and sustainability as the main goal.</p>
-                    <a href="abot.html" class="btn-pama mt-3">Read More <i class="fas fa-arrow-right"></i></a>
+                    <a href="abot.html" class="btn-pama mt-3" aria-label="Read more about us">Read More <i class="fas fa-arrow-right"></i></a>
                     
                     <div class="video-box">
-                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                        <div class="video-placeholder" onclick="window.open('https://youtu.be/hfeyH16Pm4Y?si=gz8swoX0e-mG75Xm', '_blank')">
+                             <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -387,7 +502,7 @@
                     <p class="text-secondary">During our 30 year journey, we have always innovated and focused on environmental sustainability. We are committed to providing the best service for our clients</p>
                 </div>
                 <div class="col-md-2 text-end">
-                    <a href="OurProject.html" class="btn-pama">Read More <i class="fas fa-arrow-right"></i></a>
+                    <a href="OurProject.html" class="btn-pama" aria-label="Read more about our journey">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -428,9 +543,9 @@
                         <i class="fas fa-fax me-2"></i> (+62 21) 461 4010 / 460 1916
                     </p>
                     <div class="social-box mt-3">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-md-2 mb-4 footer-links">
@@ -460,6 +575,40 @@
         </div>
     </footer>
 
+    <div class="floating-container">
+        <a href="#top" class="btn-float btn-top" id="btnBackToTop" aria-label="Kembali ke atas">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn-float btn-wa" aria-label="Hubungi kami via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Ambil elemen tombol
+        const btnBackToTop = document.getElementById('btnBackToTop');
+
+        // Fungsi saat di-scroll
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            // Jika scroll lebih dari 300px, tampilkan tombol
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnBackToTop.classList.add('show');
+            } else {
+                btnBackToTop.classList.remove('show');
+            }
+        }
+
+        // Smooth scroll saat diklik (Modern Browsers)
+        btnBackToTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
 </body>
 </html>
