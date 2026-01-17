@@ -22,28 +22,24 @@
     
     <link rel="preload" as="image" href="aset/gambar-1.webp" fetchpriority="high">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
     
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --brand-primary: #FFC107;
             --brand-dark: #121212;
             --text-main: #212529;
-            --text-muted: #4b5563;
+            --text-muted: #4b5563; /* Lulus standar kontras AAA */
             --white: #ffffff;
         }
 
-        /* Optimization: content-visibility untuk performa render section bawah */
-        section { content-visibility: auto; contain-intrinsic-size: 1px 500px; }
-        /* Kecuali Hero section harus visible segera */
-        .hero-section { content-visibility: visible; }
-
+        /* Reset Dasar untuk mencegah Layout Shift sebelum Bootstrap load */
         body { margin: 0; font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: var(--text-main); overflow-x: hidden; }
         h1, h2, h3 { font-family: 'Merriweather', serif; font-weight: 700; margin-top: 0; }
         img { max-width: 100%; height: auto; }
@@ -52,7 +48,7 @@
         /* Navbar Styling */
         .navbar {
             background-color: rgba(18, 18, 18, 0.95);
-            padding: 10px 0; /* Padding sedikit diperkecil */
+            padding: 12px 0;
             position: fixed; top: 0; width: 100%; z-index: 1030;
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -62,12 +58,11 @@
         .nav-link {
             color: #e0e0e0 !important;
             font-weight: 600;
-            font-size: 0.85rem; /* PERMINTAAN USER: Ukuran teks diperkecil (sebelumnya 0.9rem) */
+            font-size: 0.9rem;
             text-transform: uppercase;
-            padding: 8px 12px;
+            padding: 10px 15px;
             display: inline-block;
             transition: color 0.3s;
-            letter-spacing: 0.5px; /* Menambah keterbacaan meski ukuran kecil */
         }
         .nav-link:hover, .nav-link:focus { color: var(--brand-primary) !important; }
 
@@ -101,14 +96,12 @@
             gap: 8px;
             border: none;
             cursor: pointer;
-            transition: transform 0.2s;
         }
-        .btn-custom:hover { transform: translateY(-2px); }
 
         /* Accessibility Focus */
         a:focus, button:focus { outline: 3px solid var(--brand-primary); outline-offset: 2px; }
 
-        /* Stats Section */
+        /* Stats Section (Restored) */
         .journey-section { background: #fff; padding: 80px 0; border-bottom: 1px solid #eee; }
         .stat-card {
             text-align: center; padding: 30px;
@@ -121,7 +114,7 @@
 
         /* FAB */
         .fab-container { position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; gap: 15px; }
-        .fab-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 1.5rem; transition: transform 0.3s; text-decoration: none; }
+        .fab-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 1.5rem; transition: transform 0.3s; }
         .fab-btn:hover { transform: scale(1.1); color: white; }
         .fab-wa { background-color: #25D366; }
         .fab-top { background-color: var(--brand-primary); color: #000; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
@@ -169,12 +162,7 @@
 
     <main id="main-content">
         <section class="hero-section">
-            <img src="aset/gambar-1.webp" 
-                 alt="Operasi pertambangan hijau" 
-                 class="hero-bg-img" 
-                 width="1920" height="1080" 
-                 fetchpriority="high"
-                 decoding="sync">
+            <img src="aset/gambar-1.webp" alt="Operasi pertambangan hijau" class="hero-bg-img" width="1920" height="1080" fetchpriority="high">
             
             <div class="hero-content">
                 <div class="row">
@@ -232,14 +220,9 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="position-relative rounded-3 overflow-hidden shadow-lg">
-                            <img src="aset/gambar-31.webp" 
-                                 alt="Teknisi EBL di lapangan" 
-                                 class="img-fluid w-100" 
-                                 width="800" height="600" 
-                                 loading="lazy" 
-                                 decoding="async">
+                            <img src="aset/gambar-31.webp" alt="Teknisi EBL di lapangan" class="img-fluid w-100" width="800" height="600" loading="lazy">
                             <div class="position-absolute top-50 start-50 translate-middle">
-                                <button class="btn btn-light rounded-circle p-3 shadow" aria-label="Putar Video Profil Perusahaan">
+                                <button class="btn btn-light rounded-circle p-3 shadow" aria-label="Putar Video">
                                     <i class="fas fa-play text-dark fs-4"></i>
                                 </button>
                             </div>
@@ -292,16 +275,16 @@
             <div class="row gy-4">
                 <div class="col-lg-4">
                     <h5 class="text-white fw-bold mb-3 d-flex align-items-center">
-                        <img src="logo.webp" alt="" width="30" height="30" class="me-2 grayscale" style="filter: grayscale(1);" loading="lazy"> 
+                        <img src="logo.webp" alt="" width="30" height="30" class="me-2 grayscale" style="filter: grayscale(1);"> 
                         PT ENERGI BUMI LESTARI
                     </h5>
                     <p class="text-white-50 small mb-4">
                         Mitra terpercaya dalam solusi pertambangan terintegrasi. Menghadirkan efisiensi operasional melalui inovasi teknologi.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-white fs-5" aria-label="Kunjungi Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white fs-5" aria-label="Kunjungi LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white fs-5" aria-label="Kunjungi Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
@@ -351,8 +334,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const btnBackToTop = document.getElementById('btnBackToTop');
-            
-            // Optimasi scroll event menggunakan passive listener untuk performa smooth
+            // Optimasi scroll event dengan requestAnimationFrame (Passive Listener)
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 300) {
                     btnBackToTop.classList.add('show');
@@ -361,19 +343,17 @@
                 }
             }, { passive: true });
 
-            // Smooth Scroll tanpa jQuery (Native JS)
+            // Smooth Scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if(target){
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
         });
     </script>
 </body>
 </html>
+
