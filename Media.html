@@ -4,535 +4,519 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Media & Berita Terkini | PT Pamapersada Nusantara</title>
-    <meta name="description" content="Dapatkan kabar terbaru, rilis media, dan artikel informatif seputar aktivitas pertambangan, CSR, dan inovasi PT Pamapersada Nusantara.">
-    <meta name="keywords" content="Berita PAMA, Media Pamapersada, Info Tambang, CSR PAMA, PAMA Safe School, Majalah PAMA">
-    <meta name="author" content="PT Pamapersada Nusantara">
+    <title>Media & Berita Terkini - PT ENERGI BUMI LESTARI</title>
+    <meta name="description" content="Pusat informasi, rilis berita terbaru, dan artikel seputar inovasi pertambangan hijau, ESG, dan aktivitas PT Energi Bumi Lestari.">
+    <meta name="keywords" content="Berita Pertambangan, ESG Indonesia, Media EBL, Green Mining News, Energi Bumi Lestari">
+    <meta name="author" content="PT Energi Bumi Lestari">
     <meta name="robots" content="index, follow">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pamapersada.com/media/">
-    <meta property="og:title" content="Media Center - PT Pamapersada Nusantara">
-    <meta property="og:description" content="Ikuti kabar terbaru dari PT Pamapersada Nusantara.">
-    <meta property="og:image" content="assets/images/media-hero.jpg">
+    <meta name="theme-color" content="#FFC107">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://energi-bumi-lestari.com/Media.html">
+    <meta property="og:title" content="Media Center - PT ENERGI BUMI LESTARI">
+    <meta property="og:description" content="Informasi terkini transformasi energi dan pertambangan hijau.">
+    <meta property="og:image" content="aset/gambar-media-hero.webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --pama-gold: #ffc107; /* Kuning PAMA */
-            --pama-dark: #111111;
-            --pama-gray: #1a1a1a;
-            --text-light: #e0e0e0;
-            --text-muted: #aaaaaa;
+            --brand-primary: #FFC107;
+            --brand-dark: #121212;
+            --text-main: #212529;
+            --text-muted: #4b5563;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
         }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--pama-dark);
-            color: var(--text-light);
-            overflow-x: hidden;
-        }
+        /* --- GLOBAL STYLES --- */
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--light-gray); color: var(--text-main); overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { font-family: 'Merriweather', serif; font-weight: 700; margin-top: 0; }
+        img { max-width: 100%; height: auto; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s; }
 
-        h1, h2, h3, h4, h5 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Navbar */
+        /* Navbar Styling */
         .navbar {
-            background: rgba(0, 0, 0, 0.9) !important;
-            padding: 15px 0;
-            border-bottom: 1px solid #222;
+            background-color: rgba(18, 18, 18, 0.95);
+            padding: 12px 0;
+            position: fixed; top: 0; width: 100%; z-index: 1030;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
+        .navbar-brand { color: #fff; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
         .nav-link {
-            color: #fff !important;
-            font-weight: 400;
-            font-size: 0.85rem;
+            color: #e0e0e0 !important;
+            font-weight: 600;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            margin-left: 15px;
-            transition: 0.3s;
+            padding: 8px 12px;
+            display: inline-block;
+            transition: color 0.3s;
+            letter-spacing: 0.5px;
         }
-        .nav-link.active {
-            background-color: #2b3e50; /* Style tombol aktif biru tua sesuai screenshot */
-            border-radius: 4px;
-            padding: 8px 15px;
-        }
-        .nav-link:hover {
-            color: var(--pama-gold) !important;
-        }
+        .nav-link:hover, .nav-link:focus, .nav-link.active { color: var(--brand-primary) !important; }
 
-        /* Hero Section */
-        .hero-section {
+        /* Hero Sub-Page Style */
+        .page-hero {
             position: relative;
-            height: 400px;
-            /* Placeholder image crowd/press conference */
-            background: url('https://via.placeholder.com/1920x600/111/333?text=Media+Event+PAMA') no-repeat center center/cover;
+            height: 50vh;
+            min-height: 400px;
             display: flex;
             align-items: center;
+            background-color: var(--brand-dark);
+            overflow: hidden;
+            margin-top: 60px; /* Offset for fixed navbar */
         }
-        .hero-overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+        .page-hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; opacity: 0.6; z-index: 0;
         }
-        .hero-content {
-            position: relative;
-            z-index: 2;
+        .page-hero-content {
+            position: relative; z-index: 2; color: white;
+            text-align: center; width: 100%;
         }
-        .hero-title {
-            font-size: 3rem;
-            color: #fff;
-            font-weight: 700;
-        }
+        .page-title { font-size: clamp(2rem, 3.5vw, 3.5rem); margin-bottom: 1rem; }
+        .breadcrumb { justify-content: center; --bs-breadcrumb-divider-color: rgba(255,255,255,0.5); }
+        .breadcrumb-item a { color: var(--brand-primary); }
+        .breadcrumb-item.active { color: rgba(255,255,255,0.8); }
 
-        /* Section Styling */
-        .section-header-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 15px;
-            margin-top: 60px;
-        }
-        .section-title {
-            color: var(--pama-gold);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0;
-        }
+        /* --- MEDIA SPECIFIC STYLES --- */
         
-        /* Dropdown Filter */
-        .custom-select {
-            background-color: #222;
-            color: #fff;
-            border: 1px solid #444;
-            padding: 5px 15px;
-            border-radius: 4px;
+        /* Filter Bar */
+        .filter-bar {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 70px; /* Below navbar */
+            z-index: 1020;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .btn-filter {
+            border: 1px solid #dee2e6;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 8px 20px;
+            border-radius: 50px;
+            background: white;
+            transition: all 0.3s;
+        }
+        .btn-filter:hover, .btn-filter.active {
+            background-color: var(--brand-dark);
+            color: var(--brand-primary);
+            border-color: var(--brand-dark);
         }
 
         /* News Cards */
         .news-card {
-            background: transparent;
-            border: none;
-            margin-bottom: 40px;
-        }
-        .img-wrapper {
-            position: relative;
+            background: #fff;
+            border-radius: 8px;
             overflow: hidden;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            aspect-ratio: 16/9;
-        }
-        .img-wrapper img {
-            width: 100%;
             height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .news-card:hover .img-wrapper img {
-            transform: scale(1.05);
-        }
-        
-        .meta-info {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .meta-info i { margin-right: 5px; }
-
-        .news-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            line-height: 1.4;
-            color: #fff;
-            margin-bottom: 10px;
-            display: block;
-            text-decoration: none;
-        }
-        .news-title:hover {
-            color: var(--pama-gold);
-        }
-
-        .read-more {
-            color: var(--pama-gold);
-            font-size: 0.85rem;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .read-more:hover {
-            text-decoration: underline;
-        }
-
-        /* Featured/Popular Carousel */
-        .carousel-control-prev, .carousel-control-next {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0b0b0b;
-            padding: 60px 0 30px 0;
-            margin-top: 80px;
-            border-top: 1px solid #222;
-        }
-        .footer-heading {
-            font-size: 1.1rem;
-            color: #fff;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        .footer-link {
-            display: block;
-            color: #aaa;
-            text-decoration: none;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-        }
-        .footer-link:hover {
-            color: var(--pama-gold);
-        }
-        .social-box {
-            display: inline-flex;
-            width: 35px;
-            height: 35px;
-            border: 1px solid var(--pama-gold);
-            color: var(--pama-gold);
-            align-items: center;
-            justify-content: center;
-            margin-right: 8px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .social-box:hover {
-            background: var(--pama-gold);
-            color: #000;
-        }
-
-        /* FAB (Floating Action Buttons) */
-        .fab-container {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 999;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
             display: flex;
             flex-direction: column;
-            gap: 15px;
         }
-        .fab-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .news-img-wrapper {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+        }
+        .news-img-wrapper img {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .news-card:hover .news-img-wrapper img { transform: scale(1.05); }
+        
+        .news-badge {
+            position: absolute;
+            top: 15px; left: 15px;
+            background: var(--brand-primary);
+            color: var(--brand-dark);
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 5px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .news-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .news-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            text-decoration: none;
-            transition: transform 0.3s;
+            gap: 15px;
         }
-        .fab-btn:hover { transform: translateY(-5px); }
-        .fab-wa { background-color: #25D366; color: white; font-size: 28px; }
-        .fab-top {
-            background-color: var(--pama-gold);
-            color: #111;
-            font-size: 20px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: var(--brand-dark);
+            margin-bottom: 15px;
+            font-family: 'Merriweather', serif;
         }
-        .fab-top.show { opacity: 1; visibility: visible; }
-    </style>
+        .news-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        .read-more-link {
+            color: var(--brand-dark);
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid var(--brand-primary);
+            width: fit-content;
+            padding-bottom: 2px;
+        }
+        .read-more-link:hover { color: #000; border-bottom-color: #000; }
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "headline": "Media & Berita Pamapersada",
-      "description": "Kumpulan berita terbaru dan terpopuler dari PT Pamapersada Nusantara.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "PT Pamapersada Nusantara"
-      }
-    }
-    </script>
+        /* Featured News (Top Section) */
+        .featured-news-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--brand-dark);
+            color: white;
+            border: none;
+        }
+        .featured-news-card .news-title { color: white; font-size: 1.75rem; }
+        .featured-news-card .news-excerpt, .featured-news-card .news-meta { color: #ccc; }
+        .featured-news-card .read-more-link { color: var(--brand-primary); border-bottom-color: white; }
+        .featured-news-card:hover .read-more-link { color: white; border-bottom-color: var(--brand-primary); }
+
+        /* CTA Section */
+        .cta-section { background: var(--brand-primary); padding: 80px 0; }
+        .cta-btn {
+            background-color: var(--brand-dark);
+            color: #fff;
+            font-weight: 700;
+            padding: 15px 40px;
+            border-radius: 4px;
+            transition: background 0.3s;
+            border: none;
+        }
+        .cta-btn:hover { background-color: #333; color: white; }
+
+        /* FAB & Footer */
+        .fab-container { position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; gap: 15px; }
+        .fab-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 1.5rem; transition: transform 0.3s; }
+        .fab-btn:hover { transform: scale(1.1); color: white; }
+        .fab-wa { background-color: #25D366; }
+        .fab-top { background-color: var(--brand-primary); color: #000; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+        .fab-top.show { opacity: 1; pointer-events: auto; }
+
+        footer { background-color: #0a0a0a; color: #d1d5db; padding-top: 80px; padding-bottom: 30px; border-top: 1px solid #222; }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .navbar-collapse { background: #121212; padding: 20px; border-radius: 0 0 10px 10px; }
+            .page-title { margin-top: 20px; }
+            .featured-news-card .news-title { font-size: 1.4rem; }
+        }
+    </style>
 </head>
 <body id="top">
-    <div class="top-bar text-white">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="dropdown">
-                <button class="btn btn-sm btn-link text-white dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown">
-                    Bahasa Indonesia
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">English</a></li>
-                </ul>
-            </div>
-            <div class="social-mini">
-                <a href="#" class="text-white ms-2"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white ms-2"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-white ms-2"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="logo.webp" alt="PT Pamapersada Nusantara" style="height: 40px;"> <span class="ms-2 fw-bold align-middle">PT PAMAPERSADA NUSANTARA</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="abot.html">Tentang Kami</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Sustainability.html">Keberlanjutan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="CenterOfExcellence.html">Pusat Keunggulan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="OurProject.html">Project Kami</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Media.html">Media</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="Contact.html">Kontak</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Karir</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <header class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="hero-title">Media</h1>
-            <p class="lead text-white">Ikuti Kabar Terbaru dari PT Pamapersada Nusantara</p>
-        </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navigasi Utama">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.webp" alt="Logo PT Energi Bumi Lestari" width="40" height="40" class="me-2" style="object-fit: contain;">
+                    <span class="fw-bold d-none d-sm-block">PT ENERGI BUMI LESTARI</span>
+                    <span class="fw-bold d-block d-sm-none">PT EBL</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2 text-center text-lg-start">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="abot.html">Tentang Kami</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Sustainability.html">Keberlanjutan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="CenterOfExcellence.html">Pusat Keunggulan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="OurProject.html">Project Kami</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Media.html" style="color: var(--brand-primary) !important;">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <div class="container">
-        
-        <div class="section-header-row">
-            <h2 class="section-title">Berita Terpopuler</h2>
+    <main id="main-content">
+        <section class="page-hero">
+            <img src="https://placehold.co/1920x600/121212/333?text=Media+Center+EBL" alt="Pusat Media Energi Bumi Lestari" class="page-hero-bg" width="1920" height="600" fetchpriority="high">
+            
+            <div class="container page-hero-content">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-3">
+                        <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Media</li>
+                    </ol>
+                </nav>
+                <h1 class="page-title">Pusat Informasi & Berita</h1>
+                <p class="lead" style="max-width: 700px; margin: 0 auto; color: #f0f0f0;">
+                    Dapatkan kabar terkini seputar inovasi teknologi, komitmen keberlanjutan, dan aktivitas operasional PT Energi Bumi Lestari.
+                </p>
             </div>
+        </section>
 
-        <div id="carouselPopular" class="carousel slide mb-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="section-heading mb-4 border-bottom border-warning d-inline-block pb-2 fw-bold text-dark">Berita Unggulan</div>
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <article class="news-card featured-news-card h-100">
+                            <div class="news-img-wrapper" style="padding-top: 50%;">
+                                <img src="https://placehold.co/800x450/222/FFC107?text=Penghargaan+Green+Mining" alt="Penghargaan Green Mining" loading="lazy">
+                                <span class="news-badge">Prestasi</span>
+                            </div>
+                            <div class="news-body">
+                                <div class="news-meta">
+                                    <span><i class="far fa-calendar me-2"></i> 20 Jan 2026</span>
+                                    <span><i class="far fa-user me-2"></i> Admin EBL</span>
+                                </div>
+                                <h2 class="news-title">PT Energi Bumi Lestari Raih Penghargaan "Best Green Mining Initiative 2025"</h2>
+                                <p class="news-excerpt">
+                                    Komitmen tanpa henti dalam menerapkan teknologi hybrid dan restorasi lahan pascatambang membawa PT EBL meraih pengakuan tingkat nasional dalam ajang ESG Awards Indonesia.
+                                </p>
+                                <a href="1.blog.html" class="read-more-link">Baca Selengkapnya <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column gap-4 h-100">
+                            <article class="news-card h-50">
+                                <div class="news-img-wrapper" style="padding-top: 45%;">
+                                    <img src="https://placehold.co/600x300/e0e0e0/333?text=Hybrid+Truck" alt="Teknologi Hybrid Truck" loading="lazy">
+                                    <span class="news-badge">Teknologi</span>
+                                </div>
+                                <div class="news-body py-3 px-4">
+                                    <div class="news-meta mb-2">
+                                        <small><i class="far fa-calendar me-1"></i> 15 Jan 2026</small>
+                                    </div>
+                                    <h3 class="news-title h5 mb-2"><a href="2.blog.html" class="text-decoration-none text-dark">Revolusi Armada: Penggunaan 100% Truk Hybrid di Site Kaltim</a></h3>
+                                </div>
+                            </article>
+
+                            <article class="news-card h-50">
+                                <div class="news-img-wrapper" style="padding-top: 45%;">
+                                    <img src="https://placehold.co/600x300/e0e0e0/333?text=CSR+Edukasi" alt="Program CSR Sekolah" loading="lazy">
+                                    <span class="news-badge">CSR</span>
+                                </div>
+                                <div class="news-body py-3 px-4">
+                                    <div class="news-meta mb-2">
+                                        <small><i class="far fa-calendar me-1"></i> 10 Jan 2026</small>
+                                    </div>
+                                    <h3 class="news-title h5 mb-2"><a href="3.blog.html" class="text-decoration-none text-dark">EBL Mengajar: Membangun Generasi Sadar Energi Sejak Dini</a></h3>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light pb-5" id="news-grid">
+          
+
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card">
+                            <div class="news-img-wrapper">
+                                <img src="https://placehold.co/600x400/f0f0f0/222?text=Safety+Record" alt="Rekor Keselamatan Kerja" loading="lazy">
+                                <span class="news-badge bg-secondary text-white">Safety</span>
+                            </div>
+                            <div class="news-body">
+                                <div class="news-meta">
+                                    <span><i class="far fa-calendar"></i> 05 Jan 2026</span>
+                                </div>
+                                <h3 class="news-title h4"><a href="#" class="text-decoration-none text-dark">Pencapaian 5 Juta Jam Kerja Tanpa Kecelakaan (LTI)</a></h3>
+                                <p class="news-excerpt">Budaya K3 yang kuat menjadi kunci keberhasilan operasional kami di tahun ini.</p>
+                                <a href="4.blog.html" class="read-more-link">Baca Selengkapnya</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card">
+                            <div class="news-img-wrapper">
+                                <img src="https://placehold.co/600x400/f0f0f0/222?text=Reklamasi" alt="Kegiatan Reklamasi" loading="lazy">
+                                <span class="news-badge bg-success text-white">Lingkungan</span>
+                            </div>
+                            <div class="news-body">
+                                <div class="news-meta">
+                                    <span><i class="far fa-calendar"></i> 28 Des 2025</span>
+                                </div>
+                                <h3 class="news-title h4"><a href="#" class="text-decoration-none text-dark">Peresmian Hutan Kota Hasil Reklamasi Tambang</a></h3>
+                                <p class="news-excerpt">Bukti nyata komitmen EBL dalam mengembalikan keanekaragaman hayati pasca operasi.</p>
+                                <a href="5.blog.html" class="read-more-link">Baca Selengkapnya</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card">
+                            <div class="news-img-wrapper">
+                                <img src="https://placehold.co/600x400/f0f0f0/222?text=Digital+Center" alt="Digital Center" loading="lazy">
+                                <span class="news-badge bg-info text-dark">Inovasi</span>
+                            </div>
+                            <div class="news-body">
+                                <div class="news-meta">
+                                    <span><i class="far fa-calendar"></i> 15 Des 2025</span>
+                                </div>
+                                <h3 class="news-title h4"><a href="#" class="text-decoration-none text-dark">Transformasi Digital: Monitoring Real-time Berbasis AI</a></h3>
+                                <p class="news-excerpt">Implementasi sistem pemantauan otonom untuk efisiensi bahan bakar dan prediktif maintenance.</p>
+                                <a href="6.blog.html" class="read-more-link">Baca Selengkapnya</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
                 
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="news-card">
-                                <div class="img-wrapper">
-                                    <img src="https://via.placeholder.com/600x340/003366/fff?text=Apa+Itu+Batu+Bara" alt="Infografis Batu Bara" loading="lazy">
-                                </div>
-                                <div class="meta-info">
-                                    <span><i class="far fa-calendar"></i> Saturday, 30 September 2023</span>
-                                    <span><i class="fas fa-tag"></i> Sosial</span>
-                                </div>
-                                <a href="#" class="news-title">Apa itu Batu Bara dan Mengapa menjadi Sumber Energi Besar untuk Dunia?</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="news-card">
-                                <div class="img-wrapper">
-                                    <img src="https://via.placeholder.com/600x340/004488/fff?text=Mining+in+Digital+Age" alt="Digital Mining" loading="lazy">
-                                </div>
-                                <div class="meta-info">
-                                    <span><i class="far fa-calendar"></i> Saturday, 30 September 2023</span>
-                                    <span><i class="fas fa-tag"></i> Teknologi</span>
-                                </div>
-                                <a href="#" class="news-title">Pertambangan di Era Digital: Bagaimana Teknologi Mengubah Industri</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="row">
-                         <div class="col-md-6">
-                            <div class="news-card">
-                                <div class="img-wrapper">
-                                    <img src="https://via.placeholder.com/600x340/333/fff?text=PAMA+Safe+School" alt="Safe School Program" loading="lazy">
-                                </div>
-                                <div class="meta-info">
-                                    <span><i class="far fa-calendar"></i> Thursday, 13 July 2024</span>
-                                    <span><i class="fas fa-tag"></i> CSR</span>
-                                </div>
-                                <a href="#" class="news-title">PAMA Safe School: Koki Guna jadi Pahlawan Kesehatan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPopular" data-bs-slide="prev" style="left: -50px;">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselPopular" data-bs-slide="next" style="right: -50px;">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-        </div>
+        </section>
 
-        <div class="section-header-row">
-            <h2 class="section-title">Berita Terbaru</h2>
-            <div class="dropdown">
-                <button class="btn btn-outline-secondary dropdown-toggle text-white border-secondary" type="button" data-bs-toggle="dropdown">
-                    Pilih Kategori
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Semua</a></li>
-                    <li><a class="dropdown-item" href="#">Sosial</a></li>
-                    <li><a class="dropdown-item" href="#">Teknologi</a></li>
-                    <li><a class="dropdown-item" href="#">Edukasi</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="news-card">
-                    <div class="img-wrapper" style="max-height: 450px;">
-                        <img src="https://via.placeholder.com/1200x500/333/fff?text=PAMA+Safe+School+Training" alt="Pelatihan P3K PAMA" loading="lazy">
-                    </div>
-                    <div class="meta-info">
-                        <span><i class="far fa-calendar"></i> Thursday, 13 July 2024</span>
-                        <span><i class="fas fa-tag"></i> Edukasi</span>
-                    </div>
-                    <a href="#" class="news-title fs-3">PAMA Safe School: Koki Guna jadi Pahlawan Kesehatan</a>
-                    <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2 class="h2 fw-bold text-dark mb-3 font-merriweather">Ingin Meliput Kegiatan Kami?</h2>
+                <p class="lead text-dark mb-4 px-3">
+                    Tim Hubungan Media kami siap membantu jurnalis dan media untuk kebutuhan wawancara, rilis pers, dan aset visual.
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="Contact.html" class="cta-btn text-decoration-none">
+                        Hubungi Tim Media <i class="fas fa-envelope ms-2"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-dark fw-bold px-4 py-3" style="border-width: 2px;">
+                        Download Press Kit <i class="fas fa-download ms-2"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="news-card">
-                    <div class="img-wrapper">
-                        <img src="https://via.placeholder.com/400x250/552200/fff?text=PAMA+Award" alt="Penghargaan PAMA" loading="lazy">
-                    </div>
-                    <div class="meta-info">
-                        <span><i class="far fa-calendar"></i> September, 21 May 2025</span>
-                        <span><i class="fas fa-tag"></i> Prestasi</span>
-                    </div>
-                    <a href="#" class="news-title">PAMA Site ARIA dan Rumah Maggot Kintap Raih Penghargaan Emas di Riau</a>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="news-card">
-                    <div class="img-wrapper">
-                        <img src="https://via.placeholder.com/400x250/222/fff?text=UMKM+Awards" alt="UMKM Awards" loading="lazy">
-                    </div>
-                    <div class="meta-info">
-                        <span><i class="far fa-calendar"></i> Wednesday, 21 May 2025</span>
-                        <span><i class="fas fa-tag"></i> Sosial</span>
-                    </div>
-                    <a href="#" class="news-title">BERSINERGI DALAM PAMA UMKM AWARDS 2025</a>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="news-card">
-                    <div class="img-wrapper">
-                        <img src="https://via.placeholder.com/400x250/444/fff?text=PAMA+Go+To+School" alt="Budaya K3LH Sejak Dini" loading="lazy">
-                    </div>
-                    <div class="meta-info">
-                        <span><i class="far fa-calendar"></i> Friday, 23 May 2025</span>
-                        <span><i class="fas fa-tag"></i> Edukasi</span>
-                    </div>
-                    <a href="#" class="news-title">PAMA SAFE SCHOOL: UPAYA MENANAMKAN BUDAYA K3LH SEJAK DINI</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="footer-heading">PT Pamapersada Nusantara</h5>
-                    <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">
-                        Jl. Rawagelam I No. 9, Kawasan Industri Pulogadung,<br>
-                        Jakarta 13930, Indonesia
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-3 d-flex align-items-center">
+                        <img src="logo.webp" alt="" width="30" height="30" class="me-2 grayscale" style="filter: grayscale(1);"> 
+                        PT ENERGI BUMI LESTARI
+                    </h5>
+                    <p class="text-white-50 small mb-4">
+                        Mitra terpercaya dalam solusi pertambangan terintegrasi. Menghadirkan efisiensi operasional melalui inovasi teknologi.
                     </p>
-                    <p style="color: #aaa; font-size: 0.9rem;">
-                        <i class="fa-solid fa-phone me-2"></i> (+62 21) 460 2015 (hunting)<br>
-                        <i class="fa-solid fa-fax me-2"></i> (+62 21) 461 4010 / 460 1916
-                    </p>
-                </div>
-
-                <div class="col-lg-2 col-md-3 mb-4">
-                    <h5 class="footer-heading">Site Map</h5>
-                    <a href="#" class="footer-link">Tentang Kami</a>
-                    <a href="#" class="footer-link">Keberlanjutan</a>
-                    <a href="#" class="footer-link">Media</a>
-                    <a href="#" class="footer-link">Kontak</a>
-                </div>
-
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <div class="d-flex mb-3">
-                        <a href="#" class="social-box" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-box" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" class="social-box" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-5" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
+                </div>
+                
+                <div class="col-lg-2 col-6">
+                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Menu Utama</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Beranda</a></li>
+                        <li class="mb-2"><a href="abot.html" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="Sustainability.html" class="text-white-50 text-decoration-none">Keberlanjutan</a></li>
+                        <li class="mb-2"><a href="CenterOfExcellence.html" class="text-white-50 text-decoration-none">Pusat Keunggulan</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Informasi</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="OurProject.html" class="text-white-50 text-decoration-none">Project Kami</a></li>
+                        <li class="mb-2"><a href="Media.html" class="text-white-50 text-decoration-none active text-warning">Media</a></li>
+                        <li class="mb-2"><a href="Contact.html" class="text-white-50 text-decoration-none">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Hubungi Kami</h6>
+                    <p class="text-white-50 small mb-1"><i class="fas fa-phone text-warning me-2"></i> (021) 2999-8888</p>
+                    <p class="text-white-50 small"><i class="fas fa-envelope text-warning me-2"></i> info@energibumilestari.com</p>
                 </div>
             </div>
             
-            <hr style="border-color: #333;">
-            <div class="text-start" style="color: #666; font-size: 0.8rem;">
-                © Copyright PT Pamapersada Nusantara. All Rights Reserved
+            <hr class="border-secondary my-4">
+            <div class="text-center text-md-start">
+                <small class="text-white-50">&copy; 2026 PT Energi Bumi Lestari. All Rights Reserved.</small>
             </div>
         </div>
     </footer>
 
     <div class="fab-container">
-        <a href="https://wa.me/6281234567890" target="_blank" class="fab-btn fab-wa" aria-label="Chat WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
+        <a href="#top" class="fab-btn fab-top" id="btnBackToTop" aria-label="Kembali ke atas halaman">
+            <i class="fas fa-arrow-up"></i>
         </a>
-        
-        <a href="#top" class="fab-btn fab-top" id="btnBackToTop" aria-label="Kembali ke Atas">
-            <i class="fa-solid fa-arrow-up"></i>
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="fab-btn fab-wa" aria-label="Chat via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    
     <script>
-        // Back to Top Functionality
-        const btnBackToTop = document.getElementById('btnBackToTop');
-        
-        window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                btnBackToTop.classList.add('show');
-            } else {
-                btnBackToTop.classList.remove('show');
-            }
-        };
+        document.addEventListener("DOMContentLoaded", function() {
+            const btnBackToTop = document.getElementById('btnBackToTop');
+            
+            // Logic Scroll Button
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    btnBackToTop.classList.add('show');
+                } else {
+                    btnBackToTop.classList.remove('show');
+                }
+            }, { passive: true });
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth'
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Filter Logic (Simulasi Sederhana)
+            const filterBtns = document.querySelectorAll('.btn-filter');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
                 });
             });
         });
     </script>
 </body>
-</html> 
+</html>

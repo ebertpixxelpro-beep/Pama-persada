@@ -3,619 +3,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - PT Pamapersada Nusantara | Mining Contractor Indonesia</title>
-    <meta name="description" content="Profil PT Pamapersada Nusantara (PAMA). Sejarah, Visi Misi, Layanan Pertambangan, dan jajaran Direksi kontraktor pertambangan terbesar di Indonesia.">
-    <meta name="keywords" content="PAMA, Pamapersada, Mining Contractor, About Us, Visi Misi PAMA, Board of Directors PAMA">
-    <meta name="author" content="PT Pamapersada Nusantara">
+    
+    <title>Tentang Kami - PT ENERGI BUMI LESTARI</title>
+    <meta name="description" content="Profil PT Energi Bumi Lestari. Sejarah, Visi Misi, Nilai Inti, dan jajaran kepemimpinan dalam mewujudkan pertambangan berkelanjutan di Indonesia.">
+    <meta name="keywords" content="Tentang Energi Bumi Lestari, Profil Perusahaan Tambang, Visi Misi EBL, Manajemen EBL, Green Mining Indonesia">
+    <meta name="author" content="PT Energi Bumi Lestari">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#FFC107">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pamapersada.com/about">
-    <meta property="og:title" content="About Us - PT Pamapersada Nusantara">
-    <meta property="og:description" content="Preserving Natural Balance, Building Harmony with Communities.">
-    <meta property="og:image" content="assets/img/og-image.jpg">
-
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta property="og:url" content="https://energi-bumi-lestari.com/abot.html">
+    <meta property="og:title" content="Tentang Kami - PT ENERGI BUMI LESTARI">
+    <meta property="og:description" content="Membangun harmoni antara kebutuhan energi dan kelestarian alam sejak 2005.">
+    <meta property="og:image" content="aset/gambar-1.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
     <style>
+        /* --- COPY STYLE DARI INDEX.HTML AGAR KONSISTEN --- */
         :root {
-            --pama-yellow: #fdb913;
-            --pama-dark: #1a1a1a;
-            --pama-blue: #2c3e50;
-            --text-grey: #cccccc;
+            --brand-primary: #FFC107;
+            --brand-dark: #121212;
+            --text-main: #212529;
+            --text-muted: #4b5563;
+            --white: #ffffff;
         }
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            overflow-x: hidden;
-            background-color: #111; /* Default dark background based on design */
-        }
+        body { margin: 0; font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: var(--text-main); overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { font-family: 'Merriweather', serif; font-weight: 700; margin-top: 0; }
+        img { max-width: 100%; height: auto; }
+        a { text-decoration: none; color: inherit; }
 
-        h1, h2, h3, h4, h5 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* --- Navbar & Topbar (Sama dengan Index) --- */
-        .top-bar {
-            background-color: #000;
-            padding: 5px 50px;
-            display: flex;
-            justify-content: space-between;
-            color: white;
-            font-size: 0.8rem;
-        }
+        /* Navbar */
         .navbar {
-            background: rgba(0,0,0,0.9);
-            padding: 0 50px;
-            border-bottom: 1px solid #333;
+            background-color: rgba(18, 18, 18, 0.95);
+            padding: 12px 0;
+            position: fixed; top: 0; width: 100%; z-index: 1030;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
+        .navbar-brand { color: #fff; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
         .nav-link {
-            color: white !important;
+            color: #e0e0e0 !important;
             font-weight: 600;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            font-size: 0.85rem;
-            margin-left: 15px;
+            padding: 8px 12px;
+            display: inline-block;
+            transition: color 0.3s;
+            letter-spacing: 0.5px;
         }
-        .nav-link:hover, .nav-link.active {
-            color: var(--pama-yellow) !important;
-        }
-        .btn-blue-active {
-            background-color: #2c3e50;
-            color: white !important;
-            border-radius: 4px;
-            padding: 5px 10px;
-        }
+        .nav-link:hover, .nav-link:focus, .nav-link.active { color: var(--brand-primary) !important; }
 
-        /* --- Sidebar Navigation (Sticky) --- */
-        .sidebar-menu {
-            position: sticky;
-            top: 100px;
-            z-index: 100;
-        }
-        .sidebar-link {
-            display: block;
-            background: transparent;
-            border: 1px solid #444;
+        /* Hero Sub-Page */
+        .page-header {
+            background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('aset/gambar-1.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            padding: 160px 0 80px 0;
             color: white;
-            padding: 10px 15px;
-            margin-bottom: 5px;
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .sidebar-link:hover, .sidebar-link.active {
-            background: var(--pama-yellow);
-            color: black;
-            border-color: var(--pama-yellow);
-        }
-
-        /* --- Hero Section Forest --- */
-        .hero-forest {
-            background: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2074&auto=format&fit=crop') no-repeat center center/cover;
-            padding: 100px 0;
-            position: relative;
-            color: var(--pama-yellow);
-        }
-        .hero-overlay {
-            background: rgba(0,0,0,0.6);
-            position: absolute; top:0; left:0; right:0; bottom:0;
-        }
-        .hero-text-large {
-            font-size: 2.5rem;
-            line-height: 1.3;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* --- Section: History (Blue Gradient) --- */
-        .bg-blue-gradient {
-            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-            padding: 80px 0;
-            color: #333;
-        }
-        .video-thumbnail {
-            position: relative;
-            border: 2px solid var(--pama-yellow);
-            height: 250px;
-            background: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec') center/cover;
-            display: flex; justify-content: center; align-items: center;
-        }
-
-        /* --- Section: Vision & Mission (Dark Split) --- */
-        .section-dark {
-            background-color: #1a1a1a;
-            color: white;
-            padding: 80px 0;
-        }
-        .vision-icon {
-            font-size: 3rem;
-            color: var(--pama-yellow);
-            margin-bottom: 20px;
-        }
-        .mission-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .mission-icon {
-            font-size: 2rem;
-            color: var(--pama-yellow);
-            min-width: 50px;
-        }
-
-        /* --- Section: Excellence Service --- */
-        .service-icon {
-            color: var(--pama-yellow);
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-        .service-title {
-            font-weight: 700;
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        /* --- Section: FAITH (Quality Policy) --- */
-        .faith-bg {
-            background: url('https://images.unsplash.com/photo-1618557219661-468205777422?q=80&w=2070&auto=format&fit=crop'); /* Coal texture */
-            padding: 80px 0;
-            position: relative;
-        }
-        .faith-overlay { background: rgba(0,0,0,0.85); position: absolute; top:0; left:0; right:0; bottom:0; }
-        .faith-card {
             text-align: center;
-            padding: 20px 10px;
-            position: relative;
-            z-index: 2;
         }
-        .faith-letter {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            color: var(--pama-yellow);
-            font-weight: bold;
-            display: block;
-        }
-        .faith-desc {
-            color: white;
-            font-size: 0.85rem;
-            margin-top: 10px;
-        }
+        .page-title { font-size: clamp(2rem, 3vw, 3.5rem); margin-bottom: 1rem; }
+        .breadcrumb-custom { color: var(--brand-primary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
 
-        /* --- Directors Grid --- */
-        .director-card {
-            margin-bottom: 30px;
-            text-align: center;
-            background: #222;
-            padding-bottom: 15px;
-        }
-        .director-img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            object-position: top;
-            filter: grayscale(20%);
-        }
-        .director-name { color: white; margin-top: 15px; font-weight: 700; font-size: 1rem; }
-        .director-title { color: var(--pama-yellow); font-size: 0.85rem; }
-
-        /* --- Experience Timeline & Area --- */
-        .timeline-box {
-            background: #333;
-            padding: 20px;
-            color: white;
-            border-left: 3px solid var(--pama-yellow);
-            height: 100%;
-        }
-        .timeline-year { color: var(--pama-yellow); font-weight: bold; font-size: 1.2rem; }
+        /* General Sections */
+        .section-heading { font-size: 2rem; margin-bottom: 1rem; color: var(--brand-dark); position: relative; display: inline-block; }
+        .section-heading::after { content: ''; display: block; width: 60px; height: 4px; background: var(--brand-primary); margin-top: 8px; }
+        .section-heading-white { color: white; }
         
-        /* --- Floating Buttons --- */
-        .floating-container {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .btn-float {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            text-decoration: none;
+        .text-readable { color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; }
+
+        /* Vision Mission Card */
+        .vm-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            border-top: 4px solid var(--brand-primary);
             transition: transform 0.3s;
         }
-        .btn-float:hover { transform: scale(1.1); color: white;}
-        .btn-wa { background-color: #25D366; }
-        .btn-top { background-color: var(--pama-yellow); color: black; opacity: 0; visibility: hidden; transition: 0.3s;}
-        .btn-top.show { opacity: 1; visibility: visible; }
+        .vm-card:hover { transform: translateY(-5px); }
+        .vm-icon { font-size: 2.5rem; color: var(--brand-primary); margin-bottom: 20px; }
 
-        /* --- Footer --- */
-        footer {
-            background-color: #000;
-            color: white;
-            padding: 60px 0 20px 0;
-            border-top: 5px solid var(--pama-yellow);
+        /* Values Section (Dark) */
+        .values-section { background-color: var(--brand-dark); color: white; padding: 80px 0; }
+        .value-item { display: flex; gap: 20px; margin-bottom: 30px; }
+        .value-icon-box {
+            width: 60px; height: 60px;
+            background: rgba(255, 193, 7, 0.1);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--brand-primary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
         }
 
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .sidebar-menu { display: none; } /* Hide sidebar on mobile */
-            .hero-text-large { font-size: 1.8rem; }
-            .faith-letter { font-size: 3rem; }
-            .top-bar { display: none; }
+        /* Directors */
+        .director-card { position: relative; overflow: hidden; border-radius: 8px; margin-bottom: 20px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .director-img-wrapper { height: 320px; overflow: hidden; background: #eee; }
+        .director-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .director-card:hover .director-img { transform: scale(1.05); }
+        .director-info { padding: 20px; text-align: center; }
+        .director-name { font-weight: 700; font-size: 1.1rem; color: var(--brand-dark); margin-bottom: 5px; }
+        .director-role { color: var(--text-muted); font-size: 0.9rem; font-family: 'Inter', sans-serif; }
+
+        /* CTA Section */
+        .cta-section { background: var(--brand-primary); padding: 60px 0; position: relative; overflow: hidden; }
+        .btn-dark-custom { background: var(--brand-dark); color: white; padding: 12px 35px; font-weight: 700; border-radius: 4px; transition: all 0.3s; border: 2px solid var(--brand-dark); }
+        .btn-dark-custom:hover { background: transparent; color: var(--brand-dark); }
+
+        /* FAB (Copy from index) */
+        .fab-container { position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; gap: 15px; }
+        .fab-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 1.5rem; transition: transform 0.3s; }
+        .fab-btn:hover { transform: scale(1.1); color: white; }
+        .fab-wa { background-color: #25D366; }
+        .fab-top { background-color: var(--brand-primary); color: #000; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+        .fab-top.show { opacity: 1; pointer-events: auto; }
+
+        @media (max-width: 991px) {
+            .navbar-collapse { background: #121212; padding: 20px; border-radius: 0 0 10px 10px; }
+            .page-header { padding: 120px 0 60px 0; }
+            .vm-card { margin-bottom: 20px; }
         }
     </style>
 </head>
-<body>
+<body id="top">
 
-    <div class="top-bar text-white">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="dropdown">
-                <button class="btn btn-sm btn-link text-white dropdown-toggle text-decoration-none" type="button" data-bs-toggle="dropdown">
-                    Bahasa Indonesia
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">English</a></li>
-                </ul>
-            </div>
-            <div class="social-mini">
-                <a href="#" class="text-white ms-2"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white ms-2"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-white ms-2"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="logo.webp" alt="PT Pamapersada Nusantara" style="height: 40px;"> <span class="ms-2 fw-bold align-middle">PT PAMAPERSADA NUSANTARA</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="abot.html">Tentang Kami</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Sustainability.html">Keberlanjutan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="CenterOfExcellence.html">Pusat Keunggulan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="OurProject.html">Project Kami</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Media.html">Media</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="Contact.html">Kontak</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Karir</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container-fluid p-0">
-        
-        <section class="hero-forest">
-            <div class="hero-overlay"></div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navigasi Utama">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-2"></div> <div class="col-md-9">
-                        <h1 class="hero-text-large">Preserving Natural<br>Balance, Building<br>Harmony With<br>Communities.</h1>
-                        <p class="text-white mt-3" style="max-width: 600px;">As one of the largest coal mining contractors in the world, PT Pamapersada Nusantara possesses extensive expertise and a deep understanding in the development and operation of coal mines.</p>
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.webp" alt="Logo PT Energi Bumi Lestari" width="40" height="40" class="me-2" style="object-fit: contain;">
+                    <span class="fw-bold d-none d-sm-block">PT ENERGI BUMI LESTARI</span>
+                    <span class="fw-bold d-block d-sm-none">PT EBL</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2 text-center text-lg-start">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="abot.html">Tentang Kami</a></li> <li class="nav-item"><a class="nav-link" href="Sustainability.html">Keberlanjutan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="CenterOfExcellence.html">Pusat Keunggulan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="OurProject.html">Project Kami</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Media.html">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contact.html" style="color: var(--brand-primary) !important;">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <span class="breadcrumb-custom">Profil Perusahaan</span>
+                <h1 class="page-title">Siapa Kami</h1>
+                <p class="lead text-white-50 mx-auto" style="max-width: 700px;">
+                    Mengenal lebih dekat dedikasi PT Energi Bumi Lestari dalam mentransformasi industri pertambangan Indonesia.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white">
+            <div class="container py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="position-relative">
+                            <img src="aset/gambar-31.webp" alt="Sejarah Operasional EBL" class="img-fluid rounded shadow" width="800" height="600" loading="lazy">
+                            <div class="bg-dark text-white p-4 position-absolute bottom-0 start-0 m-4 rounded shadow-lg d-none d-md-block" style="border-left: 4px solid var(--brand-primary); max-width: 250px;">
+                                <div class="h3 fw-bold text-warning mb-0">20+</div>
+                                <small>Tahun Pengalaman Operasional</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <h2 class="section-heading">Jejak Langkah Kami</h2>
+                        <h4 class="h5 fw-bold mb-3 text-dark">Dari Inovasi Menuju Keberlanjutan</h4>
+                        <p class="text-readable">
+                            Berdiri sejak tahun 2005, <strong>PT Energi Bumi Lestari</strong> memulai perjalanannya dengan sebuah visi sederhana: menjadikan pertambangan lebih efisien dan ramah lingkungan.
+                        </p>
+                        <p class="text-readable">
+                            Kami adalah pionir dalam penerapan <em>Hybrid Heavy Equipment</em> di Indonesia. Melalui integrasi teknologi otonom dan manajemen berbasis data, kami telah membantu klien mengurangi biaya operasional sekaligus menekan jejak karbon secara signifikan.
+                        </p>
+                        <p class="text-readable">
+                            Kini, EBL tidak hanya dikenal sebagai kontraktor, tetapi sebagai mitra strategis dalam mewujudkan prinsip <em>Good Mining Practice</em> berstandar global.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="row g-0">
-            <div class="col-md-2 bg-black border-end border-secondary">
-                <div class="sidebar-menu p-3">
-                    <a href="#about" class="sidebar-link active">About Us</a>
-                    <a href="#history" class="sidebar-link">Our History</a>
-                    <a href="#vision" class="sidebar-link">Vision & Mission</a>
-                    <a href="#services" class="sidebar-link">Our Excellence Service</a>
-                    <a href="#quality" class="sidebar-link">Our Quality Policy</a>
-                    <a href="#board" class="sidebar-link">Commissioner & Director</a>
-                    <a href="#portfolio" class="sidebar-link">Our Portfolio</a>
-                    <a href="#area" class="sidebar-link">Operational Area</a>
-                    <a href="#award" class="sidebar-link">Award</a>
+        <section class="py-5 bg-light">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading">Arah Tujuan Kami</h2>
+                    <p class="text-muted">Landasan fundamental setiap langkah PT Energi Bumi Lestari.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="vm-card text-center">
+                            <i class="fas fa-eye vm-icon"></i>
+                            <h3 class="h4 fw-bold">Visi</h3>
+                            <p class="text-muted mb-0">
+                                Menjadi perusahaan jasa pertambangan dan energi kelas dunia yang terintegrasi, mengedepankan inovasi teknologi, serta berkomitmen penuh pada kelestarian lingkungan dan kesejahteraan bangsa.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="vm-card">
+                            <div class="text-center">
+                                <i class="fas fa-bullseye vm-icon"></i>
+                                <h3 class="h4 fw-bold">Misi</h3>
+                            </div>
+                            <ul class="list-unstyled mt-3 text-muted">
+                                <li class="mb-3 d-flex"><i class="fas fa-check-circle text-warning me-3 mt-1"></i> Memberikan layanan operasional prima dengan standar keselamatan tertinggi.</li>
+                                <li class="mb-3 d-flex"><i class="fas fa-check-circle text-warning me-3 mt-1"></i> Mengembangkan kompetensi SDM yang adaptif terhadap teknologi hijau.</li>
+                                <li class="d-flex"><i class="fas fa-check-circle text-warning me-3 mt-1"></i> Menciptakan nilai tambah berkelanjutan bagi seluruh pemangku kepentingan melalui prinsip ESG.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="col-md-10">
+        <section class="values-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <h2 class="section-heading section-heading-white">Nilai Inti (CORE)</h2>
+                        <p class="text-white-50 mb-4">
+                            Budaya kerja yang menjadi DNA setiap insan EBL dalam memberikan performa terbaik.
+                        </p>
+                        <a href="Sustainability.html" class="btn btn-outline-warning rounded-pill px-4">Lihat Laporan ESG</a>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="value-item">
+                                    <div class="value-icon-box"><i class="fas fa-hand-holding-heart"></i></div>
+                                    <div>
+                                        <h4 class="h5 text-warning">Care</h4>
+                                        <p class="text-white-50 small mb-0">Peduli terhadap keselamatan kerja, lingkungan, dan masyarakat sekitar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="value-item">
+                                    <div class="value-icon-box"><i class="fas fa-lightbulb"></i></div>
+                                    <div>
+                                        <h4 class="h5 text-warning">Optimize</h4>
+                                        <p class="text-white-50 small mb-0">Selalu mencari cara paling efisien dan efektif dalam operasional.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="value-item">
+                                    <div class="value-icon-box"><i class="fas fa-users"></i></div>
+                                    <div>
+                                        <h4 class="h5 text-warning">Respect</h4>
+                                        <p class="text-white-50 small mb-0">Saling menghargai dalam keberagaman dan menjaga integritas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="value-item">
+                                    <div class="value-icon-box"><i class="fas fa-medal"></i></div>
+                                    <div>
+                                        <h4 class="h5 text-warning">Excellence</h4>
+                                        <p class="text-white-50 small mb-0">Tidak kompromi terhadap kualitas hasil kerja.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading">Dewan Direksi</h2>
+                    <p class="text-muted">Pemimpin visioner di balik kesuksesan EBL.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="director-card">
+                            <div class="director-img-wrapper">
+                                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Foto Hendra Hutahean" class="director-img" loading="lazy">
+                            </div>
+                            <div class="director-info">
+                                <div class="director-name">Hendra Hutahean</div>
+                                <div class="director-role">Direktur Utama</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="director-card">
+                            <div class="director-img-wrapper">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto Chinthya Theresa" class="director-img" loading="lazy">
+                            </div>
+                            <div class="director-info">
+                                <div class="director-name">Chinthya Theresa</div>
+                                <div class="director-role">Direktur Operasional</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="director-card">
+                            <div class="director-img-wrapper">
+                                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Foto Roberto Dwi" class="director-img" loading="lazy">
+                            </div>
+                            <div class="director-info">
+                                <div class="director-name">Roberto Dwi</div>
+                                <div class="director-role">Direktur Keuangan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container text-center position-relative z-1">
+                <h2 class="fw-bold mb-3 text-dark">Siap Berkolaborasi?</h2>
+                <p class="lead mb-4 mx-auto text-dark" style="max-width: 600px;">
+                    Diskusikan bagaimana solusi teknologi kami dapat meningkatkan efisiensi tambang Anda.
+                </p>
+                <a href="Contact.html" class="btn btn-dark-custom">
+                    <i class="fas fa-envelope me-2"></i> Hubungi Kami
+                </a>
+            </div>
+            <i class="fas fa-cogs position-absolute" style="font-size: 15rem; color: rgba(0,0,0,0.05); top: -20%; left: -5%;"></i>
+        </section>
+
+    </main>
+
+    <footer style="background-color: #0a0a0a; color: #d1d5db; padding-top: 80px; padding-bottom: 30px;">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-3 d-flex align-items-center">
+                        <img src="logo.webp" alt="" width="30" height="30" class="me-2 grayscale" style="filter: grayscale(1);"> 
+                        PT ENERGI BUMI LESTARI
+                    </h5>
+                    <p class="text-white-50 small mb-4">
+                        Mitra terpercaya dalam solusi pertambangan terintegrasi. Menghadirkan efisiensi operasional melalui inovasi teknologi.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-5" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
                 
-                <section id="about" class="bg-blue-gradient">
-                    <div class="container px-5">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <h2 class="text-primary mb-3">About Us</h2>
-                                <h4 class="mb-4">History of PT Pamapersada Nusantara</h4>
-                                <p>We have served various clients from the mining business to produce mining and energy products. We are always committed to ESG principles and prioritize continuity and sustainability as the main goal.</p>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="video-thumbnail rounded shadow">
-                                    <i class="fas fa-play-circle fa-4x text-warning" style="cursor: pointer;"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <div class="col-lg-2 col-6">
+                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Menu Utama</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Beranda</a></li>
+                        <li class="mb-2"><a href="abot.html" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="Sustainability.html" class="text-white-50 text-decoration-none">Keberlanjutan</a></li>
+                        <li class="mb-2"><a href="CenterOfExcellence.html" class="text-white-50 text-decoration-none">Pusat Keunggulan</a></li>
+                    </ul>
+                </div>
 
-                <section id="vision" class="section-dark">
-                    <div class="container px-5">
-                        <div class="row mb-5">
-                            <div class="col-md-5">
-                                <h2 class="text-warning mb-4">Vision</h2>
-                                <div class="d-flex">
-                                    <div class="me-3"><i class="fas fa-hard-hat vision-icon"></i></div>
-                                    <p>To be the most preferred mining, energy, and vertically integrated company through highly talented energetic people to enhance sustainability and national prosperity.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop" loading="lazy" alt="Vision Silhouette" class="img-fluid opacity-50 rounded">
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-6 order-md-2">
-                                <h2 class="text-warning mb-4">Mission</h2>
-                                <div class="mission-item">
-                                    <div class="mission-icon"><i class="fas fa-truck-moving"></i></div>
-                                    <div>Optimize the best benefit of world class level services for clients with operational excellence.</div>
-                                </div>
-                                <div class="mission-item">
-                                    <div class="mission-icon"><i class="fas fa-lightbulb"></i></div>
-                                    <div>Create opportunities for employees to develop their competencies.</div>
-                                </div>
-                                <div class="mission-item">
-                                    <div class="mission-icon"><i class="fas fa-users-cog"></i></div>
-                                    <div>Continuously attempt to master technology and engineering capability.</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 order-md-1">
-                                <img src="https://images.unsplash.com/photo-1621905251189-fc015acafd31?q=80&w=2070&auto=format&fit=crop" loading="lazy" alt="PAMA Mission" class="img-fluid rounded border border-warning">
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <div class="col-lg-2 col-6">
+                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Informasi</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="OurProject.html" class="text-white-50 text-decoration-none">Project Kami</a></li>
+                        <li class="mb-2"><a href="Media.html" class="text-white-50 text-decoration-none">Media</a></li>
+                        <li class="mb-2"><a href="Contact.html" class="text-white-50 text-decoration-none">Kontak</a></li>
+                    </ul>
+                </div>
 
-                <section id="services" style="background-color: #111; padding: 80px 0; color:white;">
-                    <div class="container px-5">
-                        <h2 class="text-warning mb-5">Our Excellence<br>Service That<br>We Provide</h2>
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <i class="fas fa-truck-monster service-icon"></i>
-                                <h5 class="service-title">Mining Operations</h5>
-                                <p class="small text-secondary">Drilling, blasting, overburden removal, coal exavating, coal crushing.</p>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <i class="fas fa-road service-icon"></i>
-                                <h5 class="service-title">Infrastructure Preparation</h5>
-                                <p class="small text-secondary">Warehouses, workshops, offices, roads, and supporting operational equipment.</p>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <i class="fas fa-leaf service-icon"></i>
-                                <h5 class="service-title">Reclamation & Re-Vegetation</h5>
-                                <p class="small text-secondary">Top propagation, planting & plant maintenance of Ex-Mine Areas.</p>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <i class="fas fa-search-location service-icon"></i>
-                                <h5 class="service-title">Exploration</h5>
-                                <p class="small text-secondary">Geological mapping, topography, exploration drilling, stockpile evaluation.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <div class="col-lg-4">
+                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Hubungi Kami</h6>
+                    <p class="text-white-50 small mb-1"><i class="fas fa-phone text-warning me-2"></i> (021) 2999-8888</p>
+                    <p class="text-white-50 small"><i class="fas fa-envelope text-warning me-2"></i> info@energibumilestari.com</p>
+                </div>
+            </div>
+            
+            <hr class="border-secondary my-4">
+            <div class="text-center text-md-start">
+                <small class="text-white-50">&copy; 2026 PT Energi Bumi Lestari. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
 
-                <section id="quality" class="faith-bg">
-                    <div class="faith-overlay"></div>
-                    <div class="container px-5 text-center">
-                        <h2 class="text-white mb-2 position-relative z-2">Our Quality Policy</h2>
-                        <p class="text-secondary mb-5 position-relative z-2">We always uphold serving the nation and maintaining quality.</p>
-                        
-                        <div class="row justify-content-center">
-                            <div class="col-md-2 col-6">
-                                <div class="faith-card">
-                                    <span class="faith-letter">F</span>
-                                    <div class="faith-desc">Focus on competency and development</div>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-6">
-                                <div class="faith-card">
-                                    <span class="faith-letter">A</span>
-                                    <div class="faith-desc">Advance safety and healthy working</div>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-6">
-                                <div class="faith-card">
-                                    <span class="faith-letter">I</span>
-                                    <div class="faith-desc">International standardized management</div>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-6">
-                                <div class="faith-card">
-                                    <span class="faith-letter">T</span>
-                                    <div class="faith-desc">Technologically adapt with optimized finance</div>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-6">
-                                <div class="faith-card">
-                                    <span class="faith-letter">H</span>
-                                    <div class="faith-desc">High value added business network</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    <div class="fab-container">
+        <a href="#top" class="fab-btn fab-top" id="btnBackToTop" aria-label="Kembali ke atas halaman">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="fab-btn fab-wa" aria-label="Chat via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
-                <section id="board" class="section-dark">
-                    <div class="container px-5">
-                        <h2 class="text-white mb-2">Our Commissioner and Director</h2>
-                        <p class="text-secondary mb-5">The company's top executives are committed to leading PAMA toward innovation.</p>
-
-                        <h4 class="text-white mb-4 border-bottom border-secondary pb-2">Board of Commissioners</h4>
-                        <div class="row">
-                            <div class="col-md-3 col-6">
-                                <div class="director-card">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Comm 1" class="director-img" loading="lazy">
-                                    <div class="director-name">Djony Bunarto</div>
-                                    <div class="director-title">President Commissioner</div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6">
-                                <div class="director-card">
-                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Comm 2" class="director-img" loading="lazy">
-                                    <div class="director-name">Frans Kesuma</div>
-                                    <div class="director-title">Commissioner</div>
-                                </div>
-                            </div>
-                            </div>
-
-                        <h4 class="text-white mb-4 mt-5 border-bottom border-secondary pb-2">Board of Directors</h4>
-                        <div class="row">
-                            <div class="col-md-4 col-6">
-                                <div class="director-card">
-                                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Dir 1" class="director-img" loading="lazy">
-                                    <div class="director-name">Hendra Hutahean</div>
-                                    <div class="director-title">President Director</div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-6">
-                                <div class="director-card">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dir 2" class="director-img" loading="lazy">
-                                    <div class="director-name">Chinthya Theresa</div>
-                                    <div class="director-title">Director</div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-6">
-                                <div class="director-card">
-                                    <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Dir 3" class="director-img" loading="lazy">
-                                    <div class="director-name">Roberto Dwi</div>
-                                    <div class="director-title">Director</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="portfolio" class="bg-black py-5">
-                    <div class="container px-5">
-                        <h2 class="text-white mb-4">Our Great Experience</h2>
-                        <div class="row flex-nowrap overflow-auto pb-4">
-                            <div class="col-8 col-md-3">
-                                <div class="timeline-box">
-                                    <div class="timeline-year">1991</div>
-                                    <ul class="list-unstyled small text-secondary mt-2">
-                                        <li>PT Adaro Indonesia</li>
-                                        <li>PT Allied Indo Coal</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-8 col-md-3">
-                                <div class="timeline-box">
-                                    <div class="timeline-year">1993</div>
-                                    <ul class="list-unstyled small text-secondary mt-2">
-                                        <li>PT Bukit Asam Tbk</li>
-                                        <li>PT Indomuro Kencana</li>
-                                    </ul>
-                                </div>
-                            </div>
-                             <div class="col-8 col-md-3">
-                                <div class="timeline-box">
-                                    <div class="timeline-year">2003</div>
-                                    <ul class="list-unstyled small text-secondary mt-2">
-                                        <li>PT Kaltim Prima Coal</li>
-                                        <li>PT Berau Coal</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="area" class="bg-dark py-5 text-white">
-                    <div class="container px-5">
-                        <h2 class="mb-2">Our Operational Area</h2>
-                        <p class="text-secondary small">With over 30 years of experience, we have expanded throughout Indonesia</p>
-                        <div class="mt-4 p-5 text-center" style="background: #0b1c2c; border-radius: 10px; min-height: 300px; display:flex; align-items:center; justify-content:center;">
-                            <i class="fas fa-map-marked-alt fa-5x text-secondary"></i>
-                            <span class="ms-3 text-secondary">Interactive Map of Indonesia Placeholder</span>
-                        </div>
-                    </div>
-                </section>
-                
-                <footer style="margin-top: 0;">
-                    <div class="container px-5">
-                        <div class="row">
-                            <div class="col-md-5 mb-4">
-                                <h5 class="fw-bold mb-3">PT Pamapersada<br>Nusantara</h5>
-                                <p class="small text-white-50">
-                                    Jl.Rawagelam I No. 9, Kawasan Industri Pulogadung,<br>
-                                    Jakarta 13930, Indonesia
-                                </p>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="row">
-                                    <div class="col-sm-6"><h5 class="fw-bold">Site Map</h5><ul class="list-unstyled small text-white-50"><li>About Us</li><li>Career</li></ul></div>
-                                    <div class="col-sm-6"><h5 class="fw-bold">Contact</h5><p class="small text-white-50">(+62 21) 460 2015</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-top border-secondary pt-3 mt-3 text-center small text-secondary">
-                            &copy; Copyright PT Pamapersada Nusantara. All Rights Reserved
-                        </div>
-                    </div>
-                </footer>
-
-            </div> </div> </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     
     <script>
-        // Back to Top Logic
-        const backToTopBtn = document.getElementById("backToTop");
-
-        window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                backToTopBtn.classList.add("show");
-            } else {
-                backToTopBtn.classList.remove("show");
-            }
-        };
-
-        backToTopBtn.addEventListener("click", function(e){
-            e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-
-        // Sidebar Active State Logic (Simple version)
-        const sections = document.querySelectorAll("section");
-        const navLi = document.querySelectorAll(".sidebar-menu .sidebar-link");
-
-        window.addEventListener("scroll", () => {
-            let current = "";
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 150) {
-                    current = section.getAttribute("id");
+        document.addEventListener("DOMContentLoaded", function() {
+            const btnBackToTop = document.getElementById('btnBackToTop');
+            
+            // Logic Back to Top
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    btnBackToTop.classList.add('show');
+                } else {
+                    btnBackToTop.classList.remove('show');
                 }
-            });
+            }, { passive: true });
 
-            navLi.forEach((li) => {
-                li.classList.remove("active");
-                if (li.getAttribute("href").includes(current)) {
-                    li.classList.add("active");
-                }
+            // Smooth Scroll untuk anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
             });
         });
     </script>

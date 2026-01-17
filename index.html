@@ -55,15 +55,19 @@
         }
         .navbar-brand { color: #fff; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
         
-        .nav-link {
-            color: #e0e0e0 !important;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            padding: 10px 15px;
-            display: inline-block;
-            transition: color 0.3s;
-        }
+.nav-link {
+    color: #e0e0e0 !important;
+    font-weight: 600;
+    
+    /* UBAH BAGIAN INI */
+    font-size: 0.75rem;  /* Sebelumnya 0.85rem */
+    
+    text-transform: uppercase;
+    padding: 8px 12px;
+    display: inline-block;
+    transition: color 0.3s;
+    letter-spacing: 0.5px; 
+}
         .nav-link:hover, .nav-link:focus { color: var(--brand-primary) !important; }
 
         /* Hero Section (Critical Path) */
@@ -289,20 +293,21 @@
                 </div>
                 
                 <div class="col-lg-2 col-6">
-                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Perusahaan</h6>
+                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Menu Utama</h6>
                     <ul class="list-unstyled">
-                        <li><a href="abot.html" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Karir</a></li>
-                        <li><a href="Media.html" class="text-white-50 text-decoration-none">Berita</a></li>
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Beranda</a></li>
+                        <li class="mb-2"><a href="abot.html" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="Sustainability.html" class="text-white-50 text-decoration-none">Keberlanjutan</a></li>
+                        <li class="mb-2"><a href="CenterOfExcellence.html" class="text-white-50 text-decoration-none">Pusat Keunggulan</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6">
-                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Layanan</h6>
+                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Informasi</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white-50 text-decoration-none">Mining Contractor</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Reclamation</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Energy Consult</a></li>
+                        <li class="mb-2"><a href="OurProject.html" class="text-white-50 text-decoration-none">Project Kami</a></li>
+                        <li class="mb-2"><a href="Media.html" class="text-white-50 text-decoration-none">Media</a></li>
+                        <li class="mb-2"><a href="Contact.html" class="text-white-50 text-decoration-none">Kontak</a></li>
                     </ul>
                 </div>
 
