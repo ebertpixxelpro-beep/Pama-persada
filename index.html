@@ -20,12 +20,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <link rel="preload" as="image" href="aset/gambar-1.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="aset/Hero1.webp" fetchpriority="high">
 
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
     
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
@@ -35,39 +37,44 @@
             --brand-primary: #FFC107;
             --brand-dark: #121212;
             --text-main: #212529;
-            --text-muted: #4b5563; /* Lulus standar kontras AAA */
+            --text-muted: #4b5563;
             --white: #ffffff;
         }
 
-        /* Reset Dasar untuk mencegah Layout Shift sebelum Bootstrap load */
-        body { margin: 0; font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: var(--text-main); overflow-x: hidden; }
+        /* Optimasi Rendering Teks */
+        body { 
+            margin: 0; 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8f9fa; 
+            color: var(--text-main); 
+            overflow-x: hidden; 
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
         h1, h2, h3 { font-family: 'Merriweather', serif; font-weight: 700; margin-top: 0; }
         img { max-width: 100%; height: auto; }
         a { text-decoration: none; color: inherit; }
 
-        /* Navbar Styling */
+        /* Navbar Styling - UPDATE: PURE BLACK */
         .navbar {
-            background-color: rgba(18, 18, 18, 0.95);
+            background-color: #000000; /* UPDATED: Solid Black */
             padding: 12px 0;
             position: fixed; top: 0; width: 100%; z-index: 1030;
-            backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: background-color 0.3s ease;
         }
         .navbar-brand { color: #fff; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
         
-.nav-link {
-    color: #e0e0e0 !important;
-    font-weight: 600;
-    
-    /* UBAH BAGIAN INI */
-    font-size: 0.75rem;  /* Sebelumnya 0.85rem */
-    
-    text-transform: uppercase;
-    padding: 8px 12px;
-    display: inline-block;
-    transition: color 0.3s;
-    letter-spacing: 0.5px; 
-}
+        .nav-link {
+            color: #e0e0e0 !important;
+            font-weight: 600;
+            font-size: 0.75rem; 
+            text-transform: uppercase;
+            padding: 8px 12px;
+            display: inline-block;
+            transition: color 0.3s;
+            letter-spacing: 0.5px; 
+        }
         .nav-link:hover, .nav-link:focus { color: var(--brand-primary) !important; }
 
         /* Hero Section (Critical Path) */
@@ -78,17 +85,25 @@
             display: flex;
             align-items: center;
             overflow: hidden;
-            background-color: #121212;
+            background-color: #000000; /* Fallback color */
         }
+        /* Performance Fix: Mencegah Repaint berat */
         .hero-bg-img {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             object-fit: cover; z-index: 0; opacity: 0.7;
+            will-change: opacity; /* Hint to browser */
         }
         .hero-content { position: relative; z-index: 2; color: white; padding: 0 15px; width: 100%; max-width: 1320px; margin: 0 auto; }
-        .hero-title { font-size: clamp(2.5rem, 4vw, 4.5rem); line-height: 1.2; margin-bottom: 1.5rem; }
+        
+        /* Content Visibility Optimization */
+        .hero-title { 
+            font-size: clamp(2.5rem, 4vw, 4.5rem); 
+            line-height: 1.2; 
+            margin-bottom: 1.5rem; 
+            content-visibility: auto; 
+        }
         .hero-subtitle { font-size: clamp(1rem, 1.5vw, 1.25rem); max-width: 650px; margin-bottom: 2rem; color: #f0f0f0; }
 
-        /* Tombol Hero */
         .btn-custom {
             background-color: var(--brand-primary);
             color: #000;
@@ -100,12 +115,13 @@
             gap: 8px;
             border: none;
             cursor: pointer;
+            transition: background-color 0.2s;
         }
+        .btn-custom:hover { background-color: #e0a800; }
 
         /* Accessibility Focus */
         a:focus, button:focus { outline: 3px solid var(--brand-primary); outline-offset: 2px; }
 
-        /* Stats Section (Restored) */
         .journey-section { background: #fff; padding: 80px 0; border-bottom: 1px solid #eee; }
         .stat-card {
             text-align: center; padding: 30px;
@@ -124,13 +140,12 @@
         .fab-top { background-color: var(--brand-primary); color: #000; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
         .fab-top.show { opacity: 1; pointer-events: auto; }
 
-        /* Layout Utilities */
         .section-heading { font-size: 2.25rem; margin-bottom: 1rem; color: var(--brand-dark); position: relative; display: inline-block; }
         .section-heading::after { content: ''; display: block; width: 60px; height: 4px; background: var(--brand-primary); margin-top: 8px; }
         .text-readable { color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; }
         
         @media (max-width: 991px) {
-            .navbar-collapse { background: #121212; padding: 20px; border-radius: 0 0 10px 10px; }
+            .navbar-collapse { background: #000000; padding: 20px; border-radius: 0 0 10px 10px; border-top: 1px solid #333; }
             .hero-title { margin-top: 40px; }
             .update-bar { margin-top: 0 !important; }
         }
@@ -166,7 +181,7 @@
 
     <main id="main-content">
         <section class="hero-section">
-            <img src="aset/Hero1.webp" alt="Operasi pertambangan hijau" class="hero-bg-img" width="1920" height="1080" fetchpriority="high">
+            <img src="aset/Hero1.webp" alt="Operasi pertambangan hijau" class="hero-bg-img" width="1920" height="1080" fetchpriority="high" decoding="sync">
             
             <div class="hero-content">
                 <div class="row">
@@ -174,7 +189,7 @@
                         <h1 class="hero-title">Inovasi Energi Untuk<br>Masa Depan Bumi</h1>
                         <p class="hero-subtitle">Kami mengintegrasikan teknologi otonom dan praktik pertambangan berkelanjutan untuk menciptakan harmoni antara kebutuhan energi dan kelestarian alam.</p>
                         <div class="d-flex gap-3 flex-wrap">
-                            <a href="OurProject.html" class="btn-custom text-decoration-none">
+                            <a href="OurProject.html" class="btn-custom text-decoration-none" aria-label="Jelajahi Layanan Kami">
                                 Jelajahi Layanan <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -224,9 +239,9 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="position-relative rounded-3 overflow-hidden shadow-lg">
-                            <img src="aset/gambar-31.webp" alt="Teknisi EBL di lapangan" class="img-fluid w-100" width="800" height="600" loading="lazy">
+                            <img src="aset/gambar-31.webp" alt="Teknisi EBL di lapangan" class="img-fluid w-100" width="800" height="600" loading="lazy" decoding="async">
                             <div class="position-absolute top-50 start-50 translate-middle">
-                                <button class="btn btn-light rounded-circle p-3 shadow" aria-label="Putar Video">
+                                <button class="btn btn-light rounded-circle p-3 shadow" aria-label="Putar Video Profil">
                                     <i class="fas fa-play text-dark fs-4"></i>
                                 </button>
                             </div>
@@ -279,16 +294,16 @@
             <div class="row gy-4">
                 <div class="col-lg-4">
                     <h5 class="text-white fw-bold mb-3 d-flex align-items-center">
-                        <img src="aset/logoET.webp" alt="" width="30" height="30" class="me-2 grayscale" style="filter: grayscale(1);"> 
+                        <img src="aset/logoET.webp" alt="" width="30" height="30" class="me-2 grayscale" style="filter: grayscale(1);" loading="lazy" decoding="async"> 
                         PT ENERGI BUMI LESTARI
                     </h5>
                     <p class="text-white-50 small mb-4">
                         Mitra terpercaya dalam solusi pertambangan terintegrasi. Menghadirkan efisiensi operasional melalui inovasi teknologi.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-white fs-5" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white fs-5" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white fs-5" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="Kunjungi Facebook Kami"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="Kunjungi LinkedIn Kami"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="Kunjungi Instagram Kami"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
@@ -352,13 +367,15 @@
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if(target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
         });
     </script>
 </body>
 </html>
-
