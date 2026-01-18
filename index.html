@@ -8,179 +8,89 @@
     <meta name="description" content="Kontraktor pertambangan terkemuka di Indonesia yang mengutamakan teknologi otonom, efisiensi energi, dan prinsip ESG untuk masa depan berkelanjutan.">
     <meta name="keywords" content="Energi Bumi Lestari, Mining Contractor, ESG Indonesia, Green Energy, Alat Berat, Coal Mining">
     <meta name="author" content="PT Energi Bumi Lestari">
-    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#FFC107">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://energi-bumi-lestari.com/">
-    <meta property="og:title" content="PT ENERGI BUMI LESTARI - Future Mining">
-    <meta property="og:description" content="Transformasi energi dan pertambangan hijau untuk Indonesia.">
-    <meta property="og:image" content="aset/gambar-1.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <link rel="preload" as="image" href="aset/Hero1.webp" fetchpriority="high">
 
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-
     <style>
-        :root {
-            --brand-primary: #FFC107;
-            --brand-dark: #121212;
-            --text-main: #212529;
-            --text-muted: #4b5563;
-            --white: #ffffff;
-        }
-
-        /* Optimasi Rendering Teks */
-        body { 
-            margin: 0; 
-            font-family: 'Inter', sans-serif; 
-            background-color: #f8f9fa; 
-            color: var(--text-main); 
-            overflow-x: hidden; 
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-        }
-        h1, h2, h3 { font-family: 'Merriweather', serif; font-weight: 700; margin-top: 0; }
-        img { max-width: 100%; height: auto; }
+        /* Reset & Base */
+        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
         a { text-decoration: none; color: inherit; }
-
-        /* Navbar Styling - UPDATE: PURE BLACK (#000000) */
-        .navbar {
-            background-color: #000000; /* HITAM PEKAT */
-            padding: 12px 0;
-            position: fixed; top: 0; width: 100%; z-index: 1030;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            transition: background-color 0.3s ease;
-        }
-        .navbar-brand { color: #fff; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
         
-        .nav-link {
-            color: #e0e0e0 !important;
-            font-weight: 600;
-            font-size: 0.75rem; 
-            text-transform: uppercase;
-            padding: 8px 12px;
-            display: inline-block;
-            transition: color 0.3s;
-            letter-spacing: 0.5px; 
+        /* Navbar Critical Styles - BLACK */
+        .navbar-critical {
+            background-color: #000000; /* Hitam Pekat */
+            padding: 12px 0;
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1030;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        .nav-link:hover, .nav-link:focus { color: var(--brand-primary) !important; }
-
-        /* Hero Section (Critical Path) */
+        .container-critical { width: 100%; max-width: 1320px; margin: 0 auto; padding: 0 15px; display: flex; align-items: center; justify-content: space-between; }
+        .brand-critical { color: #fff; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+        
+        /* Hero Critical Styles */
         .hero-section {
-            position: relative;
-            height: 100vh;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background-color: #000000; /* Fallback color */
+            position: relative; height: 100vh; min-height: 600px;
+            display: flex; align-items: center; justify-content: center;
+            background-color: #000; overflow: hidden;
         }
-        /* Performance Fix: Mencegah Repaint berat */
         .hero-bg-img {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover; z-index: 0; opacity: 0.7;
-            will-change: opacity; /* Memberitahu browser untuk optimasi GPU */
+            object-fit: cover; opacity: 0.7; z-index: 0;
         }
-        .hero-content { position: relative; z-index: 2; color: white; padding: 0 15px; width: 100%; max-width: 1320px; margin: 0 auto; }
-        
-        /* Content Visibility Optimization */
+        .hero-content { position: relative; z-index: 2; width: 100%; max-width: 1320px; padding: 0 15px; margin-top: 60px; }
         .hero-title { 
-            font-size: clamp(2.5rem, 4vw, 4.5rem); 
-            line-height: 1.2; 
-            margin-bottom: 1.5rem; 
-            content-visibility: auto; /* Membantu rendering browser */
+            font-family: serif; font-weight: 700; color: #fff; margin-bottom: 1.5rem;
+            font-size: 2.5rem; line-height: 1.2;
         }
-        .hero-subtitle { font-size: clamp(1rem, 1.5vw, 1.25rem); max-width: 650px; margin-bottom: 2rem; color: #f0f0f0; }
-
-        .btn-custom {
-            background-color: var(--brand-primary);
-            color: #000;
-            font-weight: 700;
-            padding: 12px 30px;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .btn-custom:hover { background-color: #e0a800; }
-
-        /* Accessibility Focus */
-        a:focus, button:focus { outline: 3px solid var(--brand-primary); outline-offset: 2px; }
-
-        .journey-section { background: #fff; padding: 80px 0; border-bottom: 1px solid #eee; }
-        .stat-card {
-            text-align: center; padding: 30px;
-            border-bottom: 4px solid var(--brand-primary);
-            background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            height: 100%; border-radius: 8px;
-        }
-        .stat-num { font-size: 3rem; font-weight: 800; color: var(--brand-primary); font-family: 'Merriweather', serif; text-shadow: 1px 1px 0 #000; }
-        .stat-label { font-size: 1.1rem; font-weight: 600; color: #333; margin-top: 10px; }
-
-        /* FAB */
-        .fab-container { position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; gap: 15px; }
-        .fab-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 1.5rem; transition: transform 0.3s; }
-        .fab-btn:hover { transform: scale(1.1); color: white; }
-        .fab-wa { background-color: #25D366; }
-        .fab-top { background-color: var(--brand-primary); color: #000; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
-        .fab-top.show { opacity: 1; pointer-events: auto; }
-
-        .section-heading { font-size: 2.25rem; margin-bottom: 1rem; color: var(--brand-dark); position: relative; display: inline-block; }
-        .section-heading::after { content: ''; display: block; width: 60px; height: 4px; background: var(--brand-primary); margin-top: 8px; }
-        .text-readable { color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; }
+        .hero-subtitle { color: #f0f0f0; margin-bottom: 2rem; max-width: 650px; font-size: 1.1rem; }
         
-        @media (max-width: 991px) {
-            /* Pastikan dropdown menu juga hitam di mobile */
-            .navbar-collapse { background: #000000; padding: 20px; border-radius: 0 0 10px 10px; border-top: 1px solid #333; }
-            .hero-title { margin-top: 40px; }
-            .update-bar { margin-top: 0 !important; }
+        /* Button Critical */
+        .btn-core {
+            background-color: #FFC107; color: #000; font-weight: 700;
+            padding: 12px 30px; border-radius: 4px; display: inline-block; border: none; cursor: pointer;
         }
+
+        /* Responsiveness for Critical CSS */
+        @media (min-width: 768px) { .hero-title { font-size: 3.5rem; } }
+        @media (min-width: 992px) { .hero-title { font-size: 4.5rem; } }
     </style>
 </head>
+
 <body id="top">
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navigasi Utama">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="aset/logoET.webp" alt="Logo PT Energi Bumi Lestari" width="40" height="40" class="me-2" style="object-fit: contain;">
-                    <span class="fw-bold d-none d-sm-block">PT ENERGI BUMI LESTARI</span>
-                    <span class="fw-bold d-block d-sm-none">PT EBL</span>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-critical" aria-label="Navigasi Utama">
+            <div class="container container-critical">
+                <a class="navbar-brand brand-critical" href="index.html">
+                    <img src="aset/logoET.webp" alt="Logo PT Energi Bumi Lestari" width="40" height="40" style="object-fit: contain;">
+                    <span class="d-none d-sm-block">PT ENERGI BUMI LESTARI</span>
+                    <span class="d-block d-sm-none">PT EBL</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav gap-2 text-center text-lg-start">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="abot.html">Tentang Kami</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Sustainability.html">Keberlanjutan</a></li>
-                        <li class="nav-item"><a class="nav-link" href="CenterOfExcellence.html">Pusat Keunggulan</a></li>
-                        <li class="nav-item"><a class="nav-link" href="OurProject.html">Project Kami</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Media.html">Media</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Contact.html" style="color: var(--brand-primary) !important;">Kontak</a></li>
+                    <ul class="navbar-nav gap-2 text-center text-lg-start" style="margin: 0; padding: 0; list-style: none;">
+                        <li class="nav-item"><a class="nav-link active text-warning" href="index.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="abot.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Tentang Kami</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="Sustainability.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Keberlanjutan</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="CenterOfExcellence.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Pusat Keunggulan</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="OurProject.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Project Kami</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="Media.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contact.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600; color: #FFC107 !important;">Kontak</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main id="main-content">
+    <main>
         <section class="hero-section">
             <img src="aset/Hero1.webp" alt="Operasi pertambangan hijau" class="hero-bg-img" width="1920" height="1080" fetchpriority="high" decoding="sync">
             
@@ -190,8 +100,8 @@
                         <h1 class="hero-title">Inovasi Energi Untuk<br>Masa Depan Bumi</h1>
                         <p class="hero-subtitle">Kami mengintegrasikan teknologi otonom dan praktik pertambangan berkelanjutan untuk menciptakan harmoni antara kebutuhan energi dan kelestarian alam.</p>
                         <div class="d-flex gap-3 flex-wrap">
-                            <a href="OurProject.html" class="btn-custom text-decoration-none" aria-label="Jelajahi Layanan Kami">
-                                Jelajahi Layanan <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
+                            <a href="OurProject.html" class="btn-core text-decoration-none" aria-label="Jelajahi Layanan Kami">
+                                Jelajahi Layanan <span style="margin-left:8px;">&rarr;</span>
                             </a>
                         </div>
                     </div>
@@ -199,93 +109,81 @@
             </div>
         </section>
 
-        <section class="update-bar" style="background: var(--brand-dark); padding: 30px 0; margin-top: -50px; position: relative; z-index: 10; border-top: 4px solid var(--brand-primary);">
+        <section class="update-bar" style="background: #121212; padding: 30px 0; position: relative; z-index: 10; border-top: 4px solid #FFC107; margin-top: -4px;">
             <div class="container">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-3">
-                        <h2 class="h4 text-warning mb-0 fw-bold">Sekilas Info</h2>
-                        <p class="text-white-50 small mb-0">Berita operasional terbaru</p>
+                        <h2 class="h4 text-warning mb-0 fw-bold" style="color: #FFC107; margin:0; font-size: 1.5rem;">Sekilas Info</h2>
+                        <p class="text-white-50 small mb-0" style="color: rgba(255,255,255,0.5); font-size: 0.875em;">Berita operasional terbaru</p>
                     </div>
-                    <div class="col-lg-3 col-md-6 border-start border-secondary">
+                    <div class="col-lg-3 col-md-6">
                         <a href="Media.html" class="text-white text-decoration-none">
-                            <h3 class="h6 mb-1">Pencapaian 1 Juta Jam Kerja</h3>
-                            <small class="text-white-50"><i class="far fa-calendar me-1"></i> 20 Jan 2026</small>
+                            <h3 class="h6 mb-1" style="font-size: 1rem; color: #fff; margin-bottom: 0.25rem;">Pencapaian 1 Juta Jam</h3>
+                            <small class="text-white-50" style="color: rgba(255,255,255,0.5); font-size: 0.875em;">20 Jan 2026</small>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-6 border-start border-secondary">
+                    <div class="col-lg-3 col-md-6">
                         <a href="Media.html" class="text-white text-decoration-none">
-                            <h3 class="h6 mb-1">Sertifikasi Green Mining</h3>
-                            <small class="text-white-50"><i class="far fa-calendar me-1"></i> 10 Jan 2026</small>
+                            <h3 class="h6 mb-1" style="font-size: 1rem; color: #fff; margin-bottom: 0.25rem;">Sertifikasi Green Mining</h3>
+                            <small class="text-white-50" style="color: rgba(255,255,255,0.5); font-size: 0.875em;">10 Jan 2026</small>
                         </a>
-                    </div>
-                    <div class="col-lg-3 text-lg-end">
-                        <a href="Media.html" class="text-warning small fw-bold text-decoration-none">Lihat Semua Berita <i class="fas fa-chevron-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-5 bg-white">
+        <section class="py-5 bg-white" style="background-color: #fff; color: #212529; padding: 3rem 0;">
             <div class="container py-4">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-5 mb-lg-0">
-                        <h2 class="section-heading">Komitmen Kami</h2>
-                        <p class="text-readable mb-4">
-                            <strong>PT Energi Bumi Lestari</strong> bukan sekadar kontraktor, kami adalah mitra strategis dalam transformasi energi. Sejak 2005, kami telah mempelopori penggunaan armada <em>Hybrid Dump Truck</em> yang mengurangi emisi karbon hingga 30%.
+                        <h2 class="section-heading" style="font-family: serif; font-weight: 700; font-size: 2.25rem; color: #121212;">Komitmen Kami</h2>
+                        <div style="width: 60px; height: 4px; background: #FFC107; margin: 8px 0 20px 0;"></div>
+                        <p style="color: #4b5563; font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                            <strong>PT Energi Bumi Lestari</strong> bukan sekadar kontraktor, kami adalah mitra strategis dalam transformasi energi. Sejak 2005, kami telah mempelopori penggunaan armada <em>Hybrid Dump Truck</em>.
                         </p>
-                        <p class="text-readable mb-4">
-                            Visi kami jelas: Menjadi perusahaan jasa pertambangan kelas dunia yang berfokus pada produktivitas tinggi dengan dampak lingkungan seminimal mungkin melalui standar ESG yang ketat.
-                        </p>
-                        <a href="abot.html" class="text-dark fw-bold text-decoration-none border-bottom border-warning">Pelajari Lebih Lanjut</a>
+                        <a href="abot.html" style="color: #212529; font-weight: 700; border-bottom: 2px solid #FFC107;">Pelajari Lebih Lanjut</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="position-relative rounded-3 overflow-hidden shadow-lg">
-                            <img src="aset/gambar-31.webp" alt="Teknisi EBL di lapangan" class="img-fluid w-100" width="800" height="600" loading="lazy" decoding="async">
-                            <div class="position-absolute top-50 start-50 translate-middle">
-                                <button class="btn btn-light rounded-circle p-3 shadow" aria-label="Putar Video Profil">
-                                    <i class="fas fa-play text-dark fs-4"></i>
-                                </button>
-                            </div>
+                            <img src="aset/gambar-31.webp" alt="Teknisi EBL" class="img-fluid w-100" width="800" height="600" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="journey-section">
+        <section class="journey-section" style="background: #f8f9fa; padding: 80px 0; color: #212529;">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-heading">Pencapaian Kami</h2>
-                    <p class="text-muted">Dedikasi tanpa henti untuk keunggulan operasional.</p>
+                    <h2 class="section-heading" style="font-family: serif; font-weight: 700; font-size: 2.25rem;">Pencapaian Kami</h2>
                 </div>
-                <div class="row g-4">
+                <div class="row g-4 text-center">
                     <div class="col-md-4">
-                        <div class="stat-card">
-                            <div class="stat-num">3,500+</div>
-                            <div class="stat-label">Unit Alat Berat Hybrid</div>
+                        <div style="background: #fff; padding: 30px; border-bottom: 4px solid #FFC107; border-radius: 8px;">
+                            <div style="font-size: 3rem; font-weight: 800; color: #FFC107; font-family: serif;">3,500+</div>
+                            <div style="font-weight: 600;">Unit Alat Berat</div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="stat-card">
-                            <div class="stat-num">20</div>
-                            <div class="stat-label">Area Tambang Aktif</div>
+                        <div style="background: #fff; padding: 30px; border-bottom: 4px solid #FFC107; border-radius: 8px;">
+                            <div style="font-size: 3rem; font-weight: 800; color: #FFC107; font-family: serif;">20</div>
+                            <div style="font-weight: 600;">Area Tambang</div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="stat-card">
-                            <div class="stat-num">100%</div>
-                            <div class="stat-label">Komitmen Restorasi Lahan</div>
+                        <div style="background: #fff; padding: 30px; border-bottom: 4px solid #FFC107; border-radius: 8px;">
+                            <div style="font-size: 3rem; font-weight: 800; color: #FFC107; font-family: serif;">100%</div>
+                            <div style="font-weight: 600;">Restorasi Lahan</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-5 bg-warning">
+        <section class="py-5" style="background-color: #FFC107; padding: 3rem 0;">
             <div class="container text-center">
-                <h2 class="h2 fw-bold text-dark mb-3">Siap Bermitra untuk Masa Depan?</h2>
-                <p class="lead text-dark mb-4">Hubungi tim ahli kami untuk mendiskusikan kebutuhan proyek pertambangan Anda.</p>
-                <a href="Contact.html" class="btn btn-dark btn-lg px-5">Hubungi Kami Sekarang</a>
+                <h2 class="h2 fw-bold text-dark mb-3" style="font-family: serif; font-weight: 700;">Siap Bermitra?</h2>
+                <a href="Contact.html" class="btn btn-dark btn-lg px-5" style="background: #000; color: #fff; padding: 12px 30px; border-radius: 4px; display: inline-block; margin-top: 15px;">Hubungi Kami</a>
             </div>
         </section>
     </main>
@@ -295,85 +193,70 @@
             <div class="row gy-4">
                 <div class="col-lg-4">
                     <h5 class="text-white fw-bold mb-3 d-flex align-items-center">
-                        <img src="aset/logoET.webp" alt="" width="30" height="30" class="me-2 grayscale" style="filter: grayscale(1);" loading="lazy" decoding="async"> 
+                        <img src="aset/logoET.webp" alt="" width="30" height="30" class="me-2" style="filter: grayscale(1);" loading="lazy"> 
                         PT ENERGI BUMI LESTARI
                     </h5>
-                    <p class="text-white-50 small mb-4">
-                        Mitra terpercaya dalam solusi pertambangan terintegrasi. Menghadirkan efisiensi operasional melalui inovasi teknologi.
+                    <p class="text-white-50 small mb-4" style="color: rgba(255,255,255,0.5);">
+                        Mitra terpercaya dalam solusi pertambangan terintegrasi.
                     </p>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white fs-5" aria-label="Kunjungi Facebook Kami"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white fs-5" aria-label="Kunjungi LinkedIn Kami"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white fs-5" aria-label="Kunjungi Instagram Kami"><i class="fab fa-instagram"></i></a>
-                    </div>
                 </div>
-                
                 <div class="col-lg-2 col-6">
-                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Menu Utama</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Beranda</a></li>
-                        <li class="mb-2"><a href="abot.html" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
-                        <li class="mb-2"><a href="Sustainability.html" class="text-white-50 text-decoration-none">Keberlanjutan</a></li>
-                        <li class="mb-2"><a href="CenterOfExcellence.html" class="text-white-50 text-decoration-none">Pusat Keunggulan</a></li>
+                    <h6 class="text-white text-uppercase fw-bold mb-3">Menu Utama</h6>
+                    <ul class="list-unstyled" style="padding: 0; list-style: none;">
+                        <li class="mb-2"><a href="index.html" class="text-white-50">Beranda</a></li>
+                        <li class="mb-2"><a href="abot.html" class="text-white-50">Tentang Kami</a></li>
                     </ul>
                 </div>
-
-                <div class="col-lg-2 col-6">
-                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Informasi</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="OurProject.html" class="text-white-50 text-decoration-none">Project Kami</a></li>
-                        <li class="mb-2"><a href="Media.html" class="text-white-50 text-decoration-none">Media</a></li>
-                        <li class="mb-2"><a href="Contact.html" class="text-white-50 text-decoration-none">Kontak</a></li>
-                    </ul>
-                </div>
-
                 <div class="col-lg-4">
-                    <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Hubungi Kami</h6>
-                    <p class="text-white-50 small mb-1"><i class="fas fa-phone text-warning me-2"></i> (021) 2999-8888</p>
-                    <p class="text-white-50 small"><i class="fas fa-envelope text-warning me-2"></i> info@energibumilestari.com</p>
+                    <h6 class="text-white text-uppercase fw-bold mb-3">Hubungi Kami</h6>
+                    <p class="text-white-50 small mb-1">info@energibumilestari.com</p>
                 </div>
             </div>
-            
-            <hr class="border-secondary my-4">
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 30px 0;">
             <div class="text-center text-md-start">
-                <small class="text-white-50">&copy; 2026 PT Energi Bumi Lestari. All Rights Reserved.</small>
+                <small class="text-white-50">&copy; 2026 PT Energi Bumi Lestari.</small>
             </div>
         </div>
     </footer>
 
-    <div class="fab-container">
-        <a href="#top" class="fab-btn fab-top" id="btnBackToTop" aria-label="Kembali ke atas halaman">
-            <i class="fas fa-arrow-up"></i>
+    <div class="fab-container" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; gap: 15px;">
+        <a href="#top" id="btnBackToTop" aria-label="Kembali ke atas" style="width: 50px; height: 50px; background: #FFC107; border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; color: #000;">
+            &uarr;
         </a>
-        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="fab-btn fab-wa" aria-label="Chat via WhatsApp">
+        <a href="https://wa.me/6281234567890" target="_blank" aria-label="Chat WhatsApp" style="width: 50px; height: 50px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff;">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const btnBackToTop = document.getElementById('btnBackToTop');
-            // Optimasi scroll event dengan requestAnimationFrame (Passive Listener)
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 300) {
-                    btnBackToTop.classList.add('show');
+                    btnBackToTop.style.opacity = '1';
+                    btnBackToTop.style.pointerEvents = 'auto';
                 } else {
-                    btnBackToTop.classList.remove('show');
+                    btnBackToTop.style.opacity = '0';
+                    btnBackToTop.style.pointerEvents = 'none';
                 }
             }, { passive: true });
-
-            // Smooth Scroll
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            
+            // Fix Smooth Scroll
+             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
-                    if(target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
+                    if(target) target.scrollIntoView({ behavior: 'smooth' });
                 });
             });
         });
