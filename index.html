@@ -4,34 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>PT ENERGI BUMI LESTARI - Sustainable Mining & Energy</title>
-    <meta name="description" content="Kontraktor pertambangan terkemuka di Indonesia yang mengutamakan teknologi otonom, efisiensi energi, dan prinsip ESG untuk masa depan berkelanjutan.">
-    <meta name="keywords" content="Energi Bumi Lestari, Mining Contractor, ESG Indonesia, Green Energy, Alat Berat, Coal Mining">
+    <title>PT ENERGI BUMI LESTARI - Kontraktor Pertambangan & Energi Berkelanjutan</title>
+    <meta name="description" content="PT Energi Bumi Lestari adalah kontraktor pertambangan terkemuka di Indonesia. Spesialis teknologi otonom, Green Mining, dan efisiensi energi ESG sejak 2005.">
+    <meta name="keywords" content="Energi Bumi Lestari, Mining Contractor Indonesia, ESG Mining, Green Energy, Alat Berat, Coal Mining, Hybrid Dump Truck">
     <meta name="author" content="PT Energi Bumi Lestari">
+    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#FFC107">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PT ENERGI BUMI LESTARI - Sustainable Mining">
+    <meta property="og:description" content="Mitra strategis transformasi energi. Mengintegrasikan teknologi otonom dan praktik pertambangan berkelanjutan.">
+    <meta property="og:image" content="aset/Sustainability12.webp">
+    <meta property="og:url" content="https://energibumilestari.com/">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="aset/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="aset/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="aset/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="aset/favicon/site.webmanifest">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preload" as="image" href="aset/Hero1.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="aset/Sustainability12.webp" fetchpriority="high">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      "name": "PT Energi Bumi Lestari",
+      "alternateName": "PT EBL",
+      "url": "https://energibumilestari.com",
+      "logo": "https://energibumilestari.com/aset/logoET.webp",
+      "description": "Kontraktor pertambangan terkemuka di Indonesia yang mengutamakan teknologi otonom dan prinsip ESG.",
+      "foundingDate": "2005",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62-21-2999-8888",
+        "contactType": "customer service",
+        "areaServed": "ID",
+        "availableLanguage": ["Indonesian", "English"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/pt-energi-bumi-lestari",
+        "https://www.instagram.com/energibumilestari"
+      ]
+    }
+    </script>
 
     <style>
+        /* Critical CSS - Inline untuk meminimalisir Render Blocking */
         /* Reset & Base */
-        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
-        a { text-decoration: none; color: inherit; }
+        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
         
         /* Navbar Critical Styles - BLACK */
         .navbar-critical {
-            background-color: #000000; /* Hitam Pekat */
+            background-color: #000000;
             padding: 12px 0;
             position: fixed; top: 0; left: 0; width: 100%; z-index: 1030;
             display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid rgba(255,255,255,0.1);
+            height: 70px; /* Fix Height untuk mencegah CLS */
         }
         .container-critical { width: 100%; max-width: 1320px; margin: 0 auto; padding: 0 15px; display: flex; align-items: center; justify-content: space-between; }
         .brand-critical { color: #fff; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
         
-        /* Hero Critical Styles */
+        /* Hero Critical Styles - Optimized for CLS */
         .hero-section {
             position: relative; height: 100vh; min-height: 600px;
             display: flex; align-items: center; justify-content: center;
@@ -40,21 +78,34 @@
         .hero-bg-img {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             object-fit: cover; opacity: 0.7; z-index: 0;
+            will-change: transform; /* Performance Hint */
         }
         .hero-content { position: relative; z-index: 2; width: 100%; max-width: 1320px; padding: 0 15px; margin-top: 60px; }
         .hero-title { 
-            font-family: serif; font-weight: 700; color: #fff; margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif; font-weight: 700; color: #fff; margin-bottom: 1.5rem;
             font-size: 2.5rem; line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Readability improvement */
         }
-        .hero-subtitle { color: #f0f0f0; margin-bottom: 2rem; max-width: 650px; font-size: 1.1rem; }
+        .hero-subtitle { color: #f0f0f0; margin-bottom: 2rem; max-width: 650px; font-size: 1.1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
         
         /* Button Critical */
         .btn-core {
             background-color: #FFC107; color: #000; font-weight: 700;
-            padding: 12px 30px; border-radius: 4px; display: inline-block; border: none; cursor: pointer;
+            padding: 14px 30px; border-radius: 4px; display: inline-block; border: none; cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-core:hover { background-color: #e0a800; transform: translateY(-2px); }
+
+        /* Font Optimization - Mencegah FOUT (Flash of Unstyled Text) */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('Inter Regular'), local('Inter-Regular'), url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2) format('woff2'); 
         }
 
-        /* Responsiveness for Critical CSS */
+        /* Responsiveness */
         @media (min-width: 768px) { .hero-title { font-size: 3.5rem; } }
         @media (min-width: 992px) { .hero-title { font-size: 4.5rem; } }
     </style>
@@ -77,7 +128,7 @@
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav gap-2 text-center text-lg-start" style="margin: 0; padding: 0; list-style: none;">
-                        <li class="nav-item"><a class="nav-link active text-warning" href="index.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link active text-warning" href="index.html" aria-current="page" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Beranda</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="abot.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Tentang Kami</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="Sustainability.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Keberlanjutan</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="CenterOfExcellence.html" style="padding: 8px 12px; display:block; font-size: 0.8rem; text-transform:uppercase; font-weight:600;">Pusat Keunggulan</a></li>
@@ -92,7 +143,7 @@
 
     <main>
         <section class="hero-section">
-            <img src="aset/Sustainability12.webp" alt="Operasi pertambangan hijau" class="hero-bg-img" width="1920" height="1080" fetchpriority="high" decoding="sync">
+            <img src="aset/Sustainability12.webp" alt="Operasi pertambangan hijau dan alat berat otonom" class="hero-bg-img" width="1920" height="1080" fetchpriority="high" decoding="sync">
             
             <div class="hero-content">
                 <div class="row">
@@ -109,23 +160,23 @@
             </div>
         </section>
 
-        <section class="update-bar" style="background: #121212; padding: 30px 0; position: relative; z-index: 10; border-top: 4px solid #FFC107; margin-top: -4px;">
+        <section class="update-bar" style="background: #121212; padding: 30px 0; position: relative; z-index: 10; border-top: 4px solid #FFC107; margin-top: -4px; contain: content;">
             <div class="container">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-3">
                         <h2 class="h4 text-warning mb-0 fw-bold" style="color: #FFC107; margin:0; font-size: 1.5rem;">Sekilas Info</h2>
-                        <p class="text-white-50 small mb-0" style="color: rgba(255,255,255,0.5); font-size: 0.875em;">Berita operasional terbaru</p>
+                        <p class="text-white-50 small mb-0" style="color: rgba(255,255,255,0.7); font-size: 0.875em;">Berita operasional terbaru</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <a href="Media.html" class="text-white text-decoration-none">
                             <h3 class="h6 mb-1" style="font-size: 1rem; color: #fff; margin-bottom: 0.25rem;">Pencapaian 1 Juta Jam</h3>
-                            <small class="text-white-50" style="color: rgba(255,255,255,0.5); font-size: 0.875em;">20 Jan 2026</small>
+                            <small class="text-white-50" style="color: rgba(255,255,255,0.7); font-size: 0.875em;">20 Jan 2026</small>
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <a href="Media.html" class="text-white text-decoration-none">
                             <h3 class="h6 mb-1" style="font-size: 1rem; color: #fff; margin-bottom: 0.25rem;">Sertifikasi Green Mining</h3>
-                            <small class="text-white-50" style="color: rgba(255,255,255,0.5); font-size: 0.875em;">10 Jan 2026</small>
+                            <small class="text-white-50" style="color: rgba(255,255,255,0.7); font-size: 0.875em;">10 Jan 2026</small>
                         </a>
                     </div>
                 </div>
@@ -136,16 +187,16 @@
             <div class="container py-4">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-5 mb-lg-0">
-                        <h2 class="section-heading" style="font-family: serif; font-weight: 700; font-size: 2.25rem; color: #121212;">Komitmen Kami</h2>
+                        <h2 class="section-heading" style="font-family: 'Merriweather', serif; font-weight: 700; font-size: 2.25rem; color: #121212;">Komitmen Kami</h2>
                         <div style="width: 60px; height: 4px; background: #FFC107; margin: 8px 0 20px 0;"></div>
                         <p style="color: #4b5563; font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
                             <strong>PT Energi Bumi Lestari</strong> bukan sekadar kontraktor, kami adalah mitra strategis dalam transformasi energi. Sejak 2005, kami telah mempelopori penggunaan armada <em>Hybrid Dump Truck</em>.
                         </p>
-                        <a href="abot.html" style="color: #212529; font-weight: 700; border-bottom: 2px solid #FFC107;">Pelajari Lebih Lanjut</a>
+                        <a href="abot.html" style="color: #212529; font-weight: 700; border-bottom: 2px solid #FFC107; padding-bottom: 2px;" aria-label="Pelajari lebih lanjut tentang kami">Pelajari Lebih Lanjut</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="position-relative rounded-3 overflow-hidden shadow-lg">
-                            <img src="aset/tentangkami2.webp" alt="Teknisi EBL" class="img-fluid w-100" width="800" height="600" loading="lazy" decoding="async">
+                            <img src="aset/tentangkami2.webp" alt="Tim teknisi EBL sedang melakukan inspeksi di lapangan" class="img-fluid w-100" width="800" height="600" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -155,24 +206,24 @@
         <section class="journey-section" style="background: #f8f9fa; padding: 80px 0; color: #212529;">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-heading" style="font-family: serif; font-weight: 700; font-size: 2.25rem;">Pencapaian Kami</h2>
+                    <h2 class="section-heading" style="font-family: 'Merriweather', serif; font-weight: 700; font-size: 2.25rem;">Pencapaian Kami</h2>
                 </div>
                 <div class="row g-4 text-center">
                     <div class="col-md-4">
-                        <div style="background: #fff; padding: 30px; border-bottom: 4px solid #FFC107; border-radius: 8px;">
-                            <div style="font-size: 3rem; font-weight: 800; color: #FFC107; font-family: serif;">3,500+</div>
+                        <div style="background: #fff; padding: 30px; border-bottom: 4px solid #FFC107; border-radius: 8px; height: 100%;">
+                            <div style="font-size: 3rem; font-weight: 800; color: #FFC107; font-family: 'Merriweather', serif;">3,500+</div>
                             <div style="font-weight: 600;">Unit Alat Berat</div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div style="background: #fff; padding: 30px; border-bottom: 4px solid #FFC107; border-radius: 8px;">
-                            <div style="font-size: 3rem; font-weight: 800; color: #FFC107; font-family: serif;">20</div>
+                        <div style="background: #fff; padding: 30px; border-bottom: 4px solid #FFC107; border-radius: 8px; height: 100%;">
+                            <div style="font-size: 3rem; font-weight: 800; color: #FFC107; font-family: 'Merriweather', serif;">20</div>
                             <div style="font-weight: 600;">Area Tambang</div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div style="background: #fff; padding: 30px; border-bottom: 4px solid #FFC107; border-radius: 8px;">
-                            <div style="font-size: 3rem; font-weight: 800; color: #FFC107; font-family: serif;">100%</div>
+                        <div style="background: #fff; padding: 30px; border-bottom: 4px solid #FFC107; border-radius: 8px; height: 100%;">
+                            <div style="font-size: 3rem; font-weight: 800; color: #FFC107; font-family: 'Merriweather', serif;">100%</div>
                             <div style="font-weight: 600;">Restorasi Lahan</div>
                         </div>
                     </div>
@@ -182,7 +233,7 @@
 
         <section class="py-5" style="background-color: #FFC107; padding: 3rem 0;">
             <div class="container text-center">
-                <h2 class="h2 fw-bold text-dark mb-3" style="font-family: serif; font-weight: 700;">Siap Bermitra?</h2>
+                <h2 class="h2 fw-bold text-dark mb-3" style="font-family: 'Merriweather', serif; font-weight: 700;">Siap Bermitra?</h2>
                 <a href="Contact.html" class="btn btn-dark btn-lg px-5" style="background: #000; color: #fff; padding: 12px 30px; border-radius: 4px; display: inline-block; margin-top: 15px;">Hubungi Kami</a>
             </div>
         </section>
@@ -193,16 +244,16 @@
             <div class="row gy-4">
                 <div class="col-lg-4">
                     <h5 class="text-white fw-bold mb-3 d-flex align-items-center">
-                        <img src="aset/logoET.webp" alt="" width="30" height="30" class="me-2 grayscale" style="filter: grayscale(1);"> 
+                        <img src="aset/logoET.webp" alt="Logo PT EBL" width="30" height="30" class="me-2 grayscale" style="filter: grayscale(1);"> 
                         PT ENERGI BUMI LESTARI
                     </h5>
-                    <p class="text-white-50 small mb-4">
+                    <p class="text-white-50 small mb-4" style="color: rgba(255,255,255,0.7) !important;">
                         Mitra terpercaya dalam solusi pertambangan terintegrasi. Menghadirkan efisiensi operasional melalui inovasi teknologi.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-white fs-5" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white fs-5" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white fs-5" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="Kunjungi Facebook Kami"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="Kunjungi LinkedIn Kami"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white fs-5" aria-label="Kunjungi Instagram Kami"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
@@ -238,14 +289,18 @@
             </div>
         </div>
     </footer>
+    
     <div class="fab-container" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; gap: 15px;">
         <a href="#top" id="btnBackToTop" aria-label="Kembali ke atas" style="width: 50px; height: 50px; background: #FFC107; border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; color: #000;">
-            &uarr;
+            <i class="fas fa-arrow-up"></i>
         </a>
-        <a href="https://wa.me/6281234567890" target="_blank" aria-label="Chat WhatsApp" style="width: 50px; height: 50px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff;">
+        <a href="https://wa.me/6281234567890" target="_blank" aria-label="Chat via WhatsApp" style="width: 50px; height: 50px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff;">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet"></noscript>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
@@ -253,8 +308,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     
     <script>
@@ -268,7 +321,7 @@
                     btnBackToTop.style.opacity = '0';
                     btnBackToTop.style.pointerEvents = 'none';
                 }
-            }, { passive: true });
+            }, { passive: true }); // Passive listener for scrolling performance
             
             // Fix Smooth Scroll
              document.querySelectorAll('a[href^="#"]').forEach(anchor => {
